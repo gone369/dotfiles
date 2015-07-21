@@ -1,6 +1,10 @@
 if [ -f -/bashrc ]; then
     source ~/.bashrc
 fi
+if [ -f -/profile]; then
+    source ~/.profile
+fi
+
 #shows complete path in terminal
 export PS1='\u@\H:\w$ '
 #show different color for folders and files
@@ -61,3 +65,5 @@ alias mongostop="launchctl stop org.mongodb.mongod"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
