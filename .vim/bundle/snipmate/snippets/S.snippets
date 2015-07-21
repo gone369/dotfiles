@@ -1,0 +1,12 @@
+# #!/bin/zsh
+snippet calle_setup
+	pushl	%ebp
+	movl	%esp,	%ebp
+	subl	$4,		%esp
+snippet end
+end:
+	leave
+	ret
+snippet caller_return
+	addl	$${1},%esp
+
