@@ -372,7 +372,7 @@ onoremap <C-f> :S//<left>
 
 " for replacing
 
-nnoremap <C-r> :%S///gc<left><left><left><left>
+nnoremap <C-r> :.,$S///gc<left><left><left><left>
 
 " for windows
 map <silent> <A-Up> :wincmd k<CR>
