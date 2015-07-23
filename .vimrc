@@ -409,8 +409,9 @@ map <C-S-Down> :q!<CR>
 " for moving things after to next line
 map <silent> <S-o> a<CR><esc>
 
-" ctrl save
-map <C-s> :w <CR>
+" mksession
+map <C-s> :mksession! work.vim <CR>
+map <C-l> :source work.vim <CR>
 
 " undo and redo
 
