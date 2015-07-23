@@ -53,6 +53,9 @@ alias la='ls -a'
 alias open='open -a Finder ./'
 alias mongostart="launchctl start org.mongodb.mongod"
 alias mongostop="launchctl stop org.mongodb.mongod"
+alias apachestart="sudo apachectl start"
+alias apachestop="sudo apachectl stop"
+alias apacherestart="sudo apachectl restart"
 
 
 
