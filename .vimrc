@@ -14,8 +14,8 @@ set nocompatible
 set splitbelow
 set splitright
 set background=dark
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set nobackup
 set nowb
