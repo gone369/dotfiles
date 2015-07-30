@@ -16,10 +16,13 @@
     "test"
   ],
   "dependencies": {
-      "angular": "latest",
-      "angular-route": "latest",
-      "angular-animate": "latest",
-      "ngSmoothScroll": "latest",
-      "foundation": "latest"
+    "angular-foundation": "~0.6.0",
+    "angular": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "angular-animate": "~1.4.3",
+    "ngSmoothScroll": "~1.7.1",
+    "foundation": "~5.5.2",
+    "ngInfiniteScroll": "~1.2.1",
+    "n3-line-chart": "~1.1.10"
   }
 }

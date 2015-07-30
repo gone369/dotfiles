@@ -4,3 +4,104 @@
 @import variables
 @import mixins
 @import base
+@import settings
+@import foundation
+
+.center
+  margin: 0 auto
+.center-v
+  +vertical-align()
+
+.color-white
+  color: white
+.color-light
+  color: $light-color
+.color-medium
+  color: $medium-color
+.color-dark
+  color: $dark-color
+.color-action
+  color: $action-color
+
+mark.alert
+  background: $alert-color
+  color: white
+mark.warning
+  background: $warning-color
+  color: white
+mark.action
+  background: $action-color
+  color: white
+.uppercase
+  text-transform: uppercase
+
+
+#BarChartPanel
+  background-color: $background-color
+#BarChart
+  margin: 0 auto
+  padding: rem-calc(10)
+  width: auto
+  height: 300px
+#Universelogo
+  width: auto
+  height: $topbar-height
+#Searchbar
+  padding: rem-calc(5)
+  background-color: $medium-color
+  height: $topbar-height
+  .button
+    margin-top: 1.5px !important
+#DatepickerbarFolder
+  background-color: $medium-color
+  height: rem-calc(30)
+  +transition(all,0.3s,ease-in,0s)
+  +pointer()
+  &:hover
+    background-color: scale-color($medium-color, $lightness: 20%)
+#Datepickerbar
+  background-color: $light-color
+  min-width: 375px
+  +pointer()
+  height: (2*$topbar-height)
+  @media #{$medium-up}
+    height: $topbar-height
+#Datepickerpanel
+  padding: rem-calc(20)
+  background-color: $light-color
+  height: auto
+  width: auto
+  div > input,.plugin
+    text-align: center
+    width: 308px
+    margin: 0 auto
+    &.plugin
+      background-color: $light-color
+    & > * table
+      margin: 0 auto !important
+      width: 300px !important
+#DatePanelFolder
+  +transition(all,0.3s,ease-in,0s)
+  +pointer()
+  background-color: $medium-color
+  height: 30px
+  &:hover
+    background-color: scale-color($medium-color, $lightness: 20%)
+
+.inputboxes
+  margin-top: 1.5px !important
+  border-bottom-left-radius: $corner-radius !important
+  border-top-left-radius: $corner-radius !important
+
+// datepicker css
+[date-picker] .active:hover, [date-picker] .now:hover, [date-picker] .active:active, [date-picker] .now:active, [date-picker] .active.active, [date-picker] .now.active, [date-picker] .active.disabled, [date-picker] .now.disabled, [date-picker] .active[disabled], [date-picker] .now[disabled]
+  background-color: $light-color !important
+
+[date-picker] .active
+  background-color: $action-color !important
+  @include linear-gradient(bottom,scale-color($action-color, $lightness: 20%) 0%,$action-color 100%)
+[date-picker] .now
+  background-color: $action-color !important
+  @include linear-gradient(bottom,scale-color($warning-color, $lightness: 20%) 0%,$warning-color 100%)
+
+

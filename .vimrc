@@ -472,6 +472,9 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType svn setlocal spell
 autocmd FileType asciidoc setlocal spell
 
+" Syntastic Toggle
+nmap <leader>syntax :SyntasticToggleMode <cr>
+
 "trailing whitespaces
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 

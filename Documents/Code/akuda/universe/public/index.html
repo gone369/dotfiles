@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title here:</title>
+  <title>Akuda Universe</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!-- bower:css -->
   <link rel="stylesheet" href="lib/foundation/css/foundation.css" />
   <!-- endbower -->
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link rel="stylesheet" href="/static/js/datepicker/angular-datepicker.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body>
-  <h1>Hello World!</h1>
+<body ng-app="universeApp">
+  <div class="ng-view"></div>
   <!-- bower:js -->
   <script src="lib/modernizr/modernizr.js"></script>
   <script src="lib/jquery/dist/jquery.js"></script>
   <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-foundation/mm-foundation-tpls.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="lib/angular-animate/angular-animate.js"></script>
   <script src="lib/ngSmoothScroll/angular-smooth-scroll.js"></script>
@@ -23,8 +24,26 @@
   <script src="lib/jquery.cookie/jquery.cookie.js"></script>
   <script src="lib/jquery-placeholder/jquery.placeholder.js"></script>
   <script src="lib/foundation/js/foundation.js"></script>
+  <script src="lib/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+  <script src="lib/d3/d3.js"></script>
+  <script src="lib/moment/moment.js"></script>
+  <script src="lib/n3-line-chart/build/line-chart.min.js"></script>
   <!-- endbower -->
-  <script src="js/script.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <script src="/static/js/datepicker/angular-datepicker.js"></script>
+  <script src="/static/js/datepicker/datepicker.module.js"></script>
+  <script src="/static/js/datepicker/datepicker.controller.js"></script>
+  <script src="/static/js/akudachart/akudachart.module.js"></script>
+  <script src="/static/js/akudachart/akudachart.controller.js"></script>
+  <script src="/static/js/data/data.module.js"></script>
+  <script src="/static/js/data/data.services.js"></script>
+  <script src="/static/js/search/search.module.js"></script>
+  <script src="/static/js/search/search.controller.js"></script>
+  <script src="/static/js/view/view.module.js"></script>
+  <script src="/static/js/view/view.controller.js"></script>
+  <script src="/static/js/app.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

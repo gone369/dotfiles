@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-wiredep');
+  grunt.loadNpmTasks('grunt-injector');
   grunt.initConfig({
     jshint:{
         files: ['js/*.js'],
@@ -26,8 +27,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'public/static/js/script.js': ['js/script.js'],
-          'public/static/js/controllers.js': ['js/controllers.js']
+          'public/static/js/*.js': ['js/**.js']
         } //files
       } //my_target
     }, //uglify
@@ -37,8 +37,19 @@ module.exports = function(grunt) {
             dest   : 'public/static/js',
             cwd    : 'js',
             src    : [
-              '**/*.js'
+              '**/*.js','**/*.html','**/*.css'
             ]
+      }
+    },
+    injector: {
+      options: { 
+        destFile: 'public/index.html',
+        ignorePath: 'public/'
+      },
+      local_dependencies: {
+        files: {
+          'public/index.html' : ['public/static/**/*.js','public/static/**/*.css']
+        },
       }
     },
     wiredep: {
@@ -67,14 +78,14 @@ module.exports = function(grunt) {
     watch: {
       options: { livereload: true },
       scripts: {
-        files: ['js/*.js'],
-        //tasks: ['uglify','jshint','wiredep'],
-        tasks: ['copy','jshint','wiredep']
+        files: ['js/*.js','js/**/*.js','js/**/*.html'],
+        //tasks: ['uglify','jshint','wiredep','injector'],
+        tasks: ['copy','jshint','wiredep','injector']
       }, //script
       sass: {
         files: ['sass/*.scss','sass/*.sass'],
-        tasks: ['compass:dev','compass:foundation']
-        //tasks: ['compass:dev']
+        //tasks: ['compass:dev','compass:foundation']
+        tasks: ['compass:dev']
       }, //sass
       sass_foundation: {
         files: ['public/lib/foundation/scss/foundation.scss','public/lib/foundation/scss/foundation/*.scss','public/lib/foundation/scss/foundation/components/*.scss'],

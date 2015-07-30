@@ -1,1 +1,149 @@
+@function add($a,$b)
+  @return $a + $b
 
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+
+@mixin drop-shadow($blur,$color)
+  text-shadow: -1px -1px #{$blur}px $color,1px -1px #{$blur}px $color, -1px 1px #{$blur}px $color, 1px 1px #{$blur}px $color
+
+@mixin box-shadow($args)
+  -webkit-box-shadow: $args
+  -moz-box-shadow: $args
+  -ms-box-shadow: $args
+  box-shadow: $args
+
+@mixin box-sizing()
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -o-box-sizing: border-box
+  box-sizing: border-box
+
+@function legacy-direction($value) 
+  @if is-direction($value) == false 
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction."
+  
+ 
+  $conversion-map:(to top: bottom,to top right: bottom left,to right top: left bottom,to right: left,to bottom right: top left,to right bottom: left top,to bottom: top,to bottom left: top right,to left bottom: right top,to left: right,to left top: right bottom,to top left: bottom right)
+ 
+  @if map-has-key($conversion-map, $value) 
+    @return map-get($conversion-map, $value)
+  @return 90deg - #{$value}
+
+@function is-direction($value)
+  $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left, bottom, top, left, right), $value)
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value))
+ 
+  @return $is-keyword or $is-angle
+
+
+@mixin linear-gradient($direction, $color-stops...)
+  @if is-direction($direction) == false
+    $color-stops: $direction, $color-stops
+    $direction: 180deg
+
+  background: nth(nth($color-stops,1),1)
+  background: -webkit-linear-gradient(legacy-direction($direction),$color-stops)
+  background: linear-gradient($direction,$color-stops)
+
+@mixin linear-gradient-important($direction, $color-stops...)
+  @if is-direction($direction) == false
+    $color-stops: $direction, $color-stops
+    $direction: 180deg
+
+  background: nth(nth($color-stops,1),1)
+  background: -webkit-linear-gradient(legacy-direction($direction),$color-stops) !important
+  background: linear-gradient($direction,$color-stops) !important
+
+
+@mixin clearfix-hack()
+  &
+    zoom: 1
+  &:before,
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+@mixin background-size($args)
+  -webkit-background-size: $args
+  -moz-background-size: $args
+  -o-background-size: $args
+  background-size: $args
+
+@mixin pointer()
+  cursor: pointer
+  cursor: hand
+
+@mixin vertical-align()
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+@mixin vertical-align-opposite()
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(50%)
+  -ms-transform: translateY(50%)
+  transform: translateY(50%)
+
+@mixin flip($direction:x)
+  @if $direction == x
+    -moz-transform: scaleX(-1)
+    -o-transform: scaleX(-1)
+    -webkit-transform: scaleX(-1)
+    transform: scaleX(-1)
+    filter: FlipH
+    -ms-filter: "FlipH"
+  @else
+    -moz-transform: scaleY(-1)
+    -o-transform: scaleY(-1)
+    -webkit-transform: scaleY(-1)
+    transform: scaleY(-1)
+    filter: FlipV
+    -ms-filter: "FlipV"
+
+@mixin translate($x,$y)
+  -moz-transform: translate($x,$y)
+  -o-transform: translate($x,$y)
+  -webkit-transform: translate($x,$y)
+  -ms-transform: translate($x,$y)
+  transform: translate($x,$y)
+    
+
+@mixin filter($type,$arg)
+  filter: $type+unquote('(#{$arg})')
+  -webkit-filter: $type+unquote('(#{$arg})')
+  -moz-filter: $type+unquote('(#{$arg})')
+  -ms-filter: $type+unquote('(#{$arg})')
+  -o-filter: $type+unquote('(#{$arg})')
+    
+@mixin animation($name, $duration, $timing: linear, $delay: 0s, $iteration-count: infinite, $direction: normal, $fill-mode: forwards, $play-state: running)
+  -webkit-animation: $name $duration $timing $delay $iteration-count $direction $fill-mode $play-state
+  animation: $name $duration $timing $delay $iteration-count $direction $fill-mode $play-state
+  -o-animation: $name $duration $timing $delay $iteration-count $direction $fill-mode $play-state
+  -ms-animation: $name $duration $timing $delay $iteration-count $direction $fill-mode $play-state
+  -moz-animation: $name $duration $timing $delay $iteration-count $direction $fill-mode $play-state
+
+@mixin transition($property:all,$duration:1s,$timing:linear,$delay:0s) 
+  -webkit-transition: $property $duration $timing $delay
+  -moz-transition: $property $duration $timing $delay
+  -ms-transition: $property $duration $timing $delay
+  -o-transition: $property $duration $timing $delay
+  transition: $property $duration $timing $delay
+
+@mixin columns($width,$count)
+  -webkit-columns: $width $count 
+  -moz-columns: $width $count 
+  columns: $width $count 
+
+@mixin media($name)
+  @if map-has-key($media-breakpoints, $name)
+    @media #{inspect(map-get($media-breakpoints, $name))}
+      @content
+  @else
+    @warn "no media-breakpoint: `#{$name}`."

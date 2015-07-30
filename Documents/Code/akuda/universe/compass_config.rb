@@ -1,4 +1,5 @@
 # Find out more at http://compass-style.org/help/documentation/configuration-reference/
+add_import_path "public/lib/foundation/scss"
 css_dir = 'public/static/css'
 images_dir = 'public/static/images'
 fonts_dir = 'public/static/fonts'
