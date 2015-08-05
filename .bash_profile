@@ -4,6 +4,17 @@ fi
 if [ -f -/profile ]; then
     source ~/.profile
 fi
+#history
+export HISTSIZE=2000
+export HISTFILESIZE=2000
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+shopt -s histappend
+#PROMPT_COMMAND='history -a'
+export HISTCONTROL=ignorespace:erasedups
+export HISTIGNORE="ls:ps:history"
+#shopt -s cmdhist
+
+
 
 #shows complete path in terminal
 export PS1='\u@\H:\w$ '
