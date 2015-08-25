@@ -170,7 +170,7 @@ omap / <Plug>(easymotion-tn)
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
 "numbers
-nnoremap <Leader>n :NumbersToggle<CR> 
+nnoremap <Leader>n :NumbersToggle<CR>
 "syntastic
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"," proprietary attribute \"pattern"," proprietary attribute \"novalidate"]
 
@@ -483,4 +483,18 @@ nnoremap <Leader>grep :lvimgrep /a/gj %<CR><bar>:lopen<CR><bar>:lvimgrep //gj **
 "look at all snippets"
 nmap <Leader>snip i<C-R><tab>
 nmap <F5> :call ReloadAllSnippets()
+
+"CoffeeScript"
+nmap <silent>ccv :CoffeeCompile \| vertical cwindow<CR>
+nmap <silent>cch :CoffeeCompile \| horizontal cwindow<CR>
+nmap <silent>ccV :'<,'>CoffeeComiple \| vertical cwindow<CR>
+
+nmap <silent>clv :CoffeeLint \| vertical cwindow<CR><C-w>=
+nmap <silent>clh :CoffeeLint \| horizontal cwindow<CR><C-w>=
+nmap <silent>clV :'<,'>CoffeeLint \| vertical cwindow<CR><C-w>=
+
+vnoremap <silent>cr :CoffeeRun<CR>
+
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
 
