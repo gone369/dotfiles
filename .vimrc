@@ -31,7 +31,8 @@ set title
 set scrolloff=3
 set cmdheight=2
 set number
-"set transparency=20
+colors solarized
+"colors koehler
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -48,9 +49,9 @@ set incsearch		" do incremental searching
 
 
 if has("gui_running")
-    colors koehler
-    set lines=56
-    set columns=140
+  set transparency=10
+  set lines=56
+  set columns=140
 endif
 
 
@@ -73,7 +74,7 @@ inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 "if has('mouse')
-"set mouse=a
+  "set mouse=a
 "endif
 
 " ---------------------HIGHLIGHTING----------------------------
@@ -83,6 +84,17 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
 endif
+
+" ---------------------(syntax)SYNTAX HIGHLIGHTING----------------------------
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+au FileType javascript call JavaScriptFold()
+autocmd BufReadPre *.js let g:used_javascript_libs = 'underscore,angularjs,angularui,angularuirouter,react,flux,jasmin'
+"autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+"autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
+"autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
+"autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
+"autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 
 "---- deletes highlighting after search by pressing esc
 nnoremap <silent> <CR> :nohl <cr><cr>
@@ -155,24 +167,72 @@ let g:html_indent_inctags = "html,body,head,tbody,article,aside,details,figcapti
 "----------------------------------------PLUGINS -------------------------
 "pathogen
 call pathogen#infect()
-"ctrl p
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 "nerd tree
 let NERDTreeChDirMode=2
 let NERDTreeMouseMode=3
 let NERDTreeQuitOnOpen=1
 "autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle <CR>
-"easy motion plugin
+"--------------------------------------------easy motion plugin
 map <Leader> <Plug>(easymotion-prefix)
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
-"numbers
+"-----------------------------------------------------numbers
 nnoremap <Leader>n :NumbersToggle<CR>
-"syntastic
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"," proprietary attribute \"pattern"," proprietary attribute \"novalidate"]
+"------------------------------------------------------syntastic
+let g:syntastic_always_populate_loc_list = 1
+
+nnoremap ]l :lnext<CR>
+nnoremap [l :lprev<CR>
+
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open = 1
+" Set up the arrays to ignore for later
+if !exists('g:syntastic_html_tidy_ignore_errors')
+    let g:syntastic_html_tidy_ignore_errors = []
+endif
+
+if !exists('g:syntastic_html_tidy_blocklevel_tags')
+    let g:syntastic_html_tidy_blocklevel_tags = []
+endif
+
+" Try to use HTML5 Tidy for better checking?
+let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy5'
+" AP: honestly can't remember if this helps or not
+" installed with homebrew locally
+
+" Ignore ionic tags in HTML syntax checking
+" See http://stackoverflow.com/questions/30366621
+" ignore errors about Ionic tags
+let g:syntastic_html_tidy_ignore_errors += [
+      \ "<ion-",
+      \ "discarding unexpected </ion-"]
+
+" Angular's attributes confuse HTML Tidy
+let g:syntastic_html_tidy_ignore_errors += [
+      \ " proprietary attribute \"ng-"]
+
+" Angular UI-Router attributes confuse HTML Tidy
+let g:syntastic_html_tidy_ignore_errors += [
+      \ " proprietary attribute \"ui-sref"]
+
+" Angular in particular often makes 'empty' blocks, so ignore
+" this error. We might improve how we do this though.
+" See also https://github.com/scrooloose/syntastic/wiki/HTML:---tidy
+" specifically g:syntastic_html_tidy_empty_tags
+let g:syntastic_html_tidy_ignore_errors += ["trimming empty "]
+
+" Angular ignores
+let g:syntastic_html_tidy_blocklevel_tags += [
+      \ 'ng-include',
+      \ 'ng-form'
+      \ ]
+
+" Angular UI-router ignores
+let g:syntastic_html_tidy_ignore_errors += [
+      \ " proprietary attribute \"ui-sref"]
 
 "---------------------------------------------------------lightline plugin
 
@@ -181,7 +241,7 @@ if !has('gui-running')
     set t_Co=256
 endif
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -313,7 +373,10 @@ let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
 
 "--------------end of lightline setup------------------"
-
+"------------------------------------MatchTagAlways-----------------------------
+nnoremap <leader>% :MtaJumpToOtherTag<cr>
+"---------------------------------------------ctrlp------------------------------------"
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 "------------ control p mappings----------------
   let g:ctrlp_prompt_mappings = {
     \ 'PrtBS()':              ['<bs>', '<c-]>'],
@@ -495,7 +558,5 @@ nmap <silent>clV :'<,'>CoffeeLint \| vertical cwindow<CR><C-w>=
 
 vnoremap <silent>cr :CoffeeRun<CR>
 
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 
