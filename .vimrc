@@ -31,7 +31,7 @@ set title
 set scrolloff=3
 set cmdheight=2
 set number
-set transparency=20
+"set transparency=20
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
