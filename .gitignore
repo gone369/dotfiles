@@ -1,5 +1,6 @@
 *
 !.vim
+!.vim/**
 !.vimrc
 !.bash_profile
 !.bashrc

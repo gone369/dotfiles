@@ -496,5 +496,6 @@ nmap <silent>clV :'<,'>CoffeeLint \| vertical cwindow<CR><C-w>=
 vnoremap <silent>cr :CoffeeRun<CR>
 
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 
