@@ -45,7 +45,7 @@
 	url = https://github.com/gorodinskiy/vim-coloresque.git
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized/.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/vim-colortuner"]
 	path = .vim/bundle/vim-colortuner
 	url = https://github.com/zefei/vim-colortuner/.git
