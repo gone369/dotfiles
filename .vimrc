@@ -49,7 +49,9 @@ set incsearch		" do incremental searching
 
 
 if has("gui_running")
-  set transparency=10
+  if !has("win32")
+    set transparency=10
+  endif
   set lines=56
   set columns=140
 endif
