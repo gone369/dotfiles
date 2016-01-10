@@ -91,3 +91,6 @@
 [submodule ".vim/bundle/vim-tabular"]
 	path = .vim/bundle/vim-tabular
 	url = https://github.com/godlygeek/vim-tabular.git
+[submodule ".vim/bundle/vim-html5"]
+	path = .vim/bundle/vim-html5
+	url = https://github.com/othree/vim-html5.git
