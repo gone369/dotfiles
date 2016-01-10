@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/vim-repmo"]
 	path = .vim/bundle/vim-repmo
 	url = https://github.com/vim-scripts/repmo.vim.git
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
