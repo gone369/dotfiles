@@ -94,3 +94,6 @@
 [submodule ".vim/bundle/vim-html5"]
 	path = .vim/bundle/vim-html5
 	url = https://github.com/othree/vim-html5.git
+[submodule ".vim/bundle/vim-nerdcommenter"]
+	path = .vim/bundle/vim-nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
