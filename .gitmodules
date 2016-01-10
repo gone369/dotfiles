@@ -84,7 +84,7 @@
 	url = https://github.com/isRuslan/vim-es6.git
 [submodule ".vim/bundle/vim-nerdtree"]
 	path = .vim/bundle/vim-nerdtree
-	url = https://github.com/scrooloose/vim-nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/vim-numbers"]
 	path = .vim/bundle/vim-numbers
 	url = https://github.com/myusuf3/vim-numbers.git
