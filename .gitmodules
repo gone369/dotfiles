@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-indent-line"]
+	path = .vim/bundle/vim-indent-line
+	url = https://github.com/Yggdroot/indentLine.git
