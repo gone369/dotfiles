@@ -6,13 +6,17 @@ if [ -f -/profile ]; then
 fi
 #history
 export HISTSIZE=2000
-export HISTFILESIZE=2000
+export HISTFILESIZE=10000
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
 shopt -s histappend
 #PROMPT_COMMAND='history -a'
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export HISTCONTROL=ignorespace:erasedups
-export HISTIGNORE="ls:ps:history"
+export HISTIGNORE="..:...:cd:ls:ps:history"
 #shopt -s cmdhist
+
+#remove suspend terminal function and allow us to go back in recursive search after pressing ctrl+r
+stty -ixon
 
 
 
@@ -48,14 +52,17 @@ extract () {
 
 function cs()
 {
-    if [ $# -eq 0 ]; then
-        cd && ls
-    else
-        cd "$*" && ls
-    fi
+  if [ $# -eq 0 ]; then
+      cd && ls
+  else
+      cd "$*" && ls
+  fi
 }
-alias cd='cs'
+function grepe(){
+  grep --color -Er $1 $2
+}
 
+alias cd='cs'
 alias aliases='vim ~/.bash_profile'
 alias ..='cd ../'
 alias ...='cd ../..'
@@ -68,6 +75,10 @@ alias apachestart="sudo apachectl start"
 alias apachestop="sudo apachectl stop"
 alias apacherestart="sudo apachectl restart"
 alias mvimt="open -a MacVim"
+alias mv="mv -v"
+alias cp="cp -v"
+alias grep="grepe"
+
 
 
 

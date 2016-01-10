@@ -165,15 +165,20 @@ let g:html_indent_inctags = "html,body,head,tbody,article,aside,details,figcapti
 
 
 "----------------------------------------PLUGINS -------------------------
-"pathogen
+"---------------------------------------------pathogen
 call pathogen#infect()
-"nerd tree
+"---------------------------------------------colortuner
+let g:colortuner_filepath='~/.vim/bundle/vim-colortuner/.vim-colortuner'
+let g:colortuner_enabled=1
+let g:colortuner_vivid_mode=0
+let g:colortuner_preferred_schemes=[]
+"---------------------------------------------nerdtree
 let NERDTreeChDirMode=2
 let NERDTreeMouseMode=3
 let NERDTreeQuitOnOpen=1
 "autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle <CR>
-"--------------------------------------------easy motion plugin
+"--------------------------------------------easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
@@ -234,186 +239,217 @@ let g:syntastic_html_tidy_blocklevel_tags += [
 let g:syntastic_html_tidy_ignore_errors += [
       \ " proprietary attribute \"ui-sref"]
 
-"---------------------------------------------------------lightline plugin
+"-------------airline-----------"
+if !has("gui_running")
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#left_sep = ''
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+endif
+let g:airline_left_sep=' ⫸ '
+let g:airline_right_sep=' ⫷ '
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+"let g:airline_section_c = expand('%:p')
 
 set laststatus=2
-if !has('gui-running')
-    set t_Co=256
-endif
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-      \ },
-      \ 'component':{
-      \ 'readonly':'%{&readonly?"x":""}',
-      \ },
-      \ 'component_function': {
-      \   'fugitive': 'MyFugitive',
-      \   'filename': 'MyFilename',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode',
-      \   'ctrlpmark': 'CtrlPMark',
-      \ },
-      \ 'component_expand': {
-      \   'syntastic': 'SyntasticStatuslineFlag',
-      \ },
-      \ 'component_type': {
-      \   'syntastic': 'error',
-      \ },
-      \ }
+"---------------------------------------------------------lightline plugin
 
-function! MyModified()
-  return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
+"set laststatus=2
+"if !has('gui-running')
+    "set t_Co=256
+"endif
+"let g:lightline = {
+      "\ 'colorscheme': 'solarized',
+      "\ 'active': {
+      "\   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+      "\   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      "\ },
+      "\ 'component':{
+      "\ 'readonly':'%{&readonly?"x":""}',
+      "\ },
+      "\ 'component_function': {
+      "\   'fugitive': 'MyFugitive',
+      "\   'filename': 'MyFilename',
+      "\   'fileformat': 'MyFileformat',
+      "\   'filetype': 'MyFiletype',
+      "\   'fileencoding': 'MyFileencoding',
+      "\   'mode': 'MyMode',
+      "\   'ctrlpmark': 'CtrlPMark',
+      "\ },
+      "\ 'component_expand': {
+      "\   'syntastic': 'SyntasticStatuslineFlag',
+      "\ },
+      "\ 'component_type': {
+      "\   'syntastic': 'error',
+      "\ },
+      "\ }
 
-function! MyReadonly()
-  return &ft !~? 'help' && &readonly ? 'RO' : ''
-endfunction
+"function! MyModified()
+  "return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+"endfunction
 
-function! MyFilename()
-  let fname = expand('%:t')
-  return fname == 'ControlP' ? g:lightline.ctrlp_item :
-        \ fname == '__Tagbar__' ? g:lightline.fname :
-        \ fname =~ '__Gundo\|NERD_tree' ? '' :
-        \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \ &ft == 'unite' ? unite#get_status_string() :
-        \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ ('' != fname ? fname : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
+"function! MyReadonly()
+  "return &ft !~? 'help' && &readonly ? 'RO' : ''
+"endfunction
 
-function! MyFugitive()
-  try
-    if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ''  " edit here for cool mark
-      let _ = fugitive#head()
-      return strlen(_) ? mark._ : ''
-    endif
-  catch
-  endtry
-  return ''
-endfunction
+"function! MyFilename()
+  "let fname = expand('%:t')
+  "return fname == 'ControlP' ? g:lightline.ctrlp_item :
+        "\ fname == '__Tagbar__' ? g:lightline.fname :
+        "\ fname =~ '__Gundo\|NERD_tree' ? '' :
+        "\ &ft == 'vimfiler' ? vimfiler#get_status_string() :
+        "\ &ft == 'unite' ? unite#get_status_string() :
+        "\ &ft == 'vimshell' ? vimshell#get_status_string() :
+        "\ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+        "\ ('' != fname ? fname : '[No Name]') .
+        "\ ('' != MyModified() ? ' ' . MyModified() : '')
+"endfunction
 
-function! MyFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
-endfunction
+"function! MyFugitive()
+  "try
+    "if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+      "let mark = ''  " edit here for cool mark
+      "let _ = fugitive#head()
+      "return strlen(_) ? mark._ : ''
+    "endif
+  "catch
+  "endtry
+  "return ''
+"endfunction
 
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
+"function! MyFileformat()
+  "return winwidth(0) > 70 ? &fileformat : ''
+"endfunction
 
-function! MyFileencoding()
-  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
+"function! MyFiletype()
+  "return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+"endfunction
 
-function! MyMode()
-  let fname = expand('%:t')
-  return fname == '__Tagbar__' ? 'Tagbar' :
-        \ fname == 'ControlP' ? 'CtrlP' :
-        \ fname == '__Gundo__' ? 'Gundo' :
-        \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
-        \ fname =~ 'NERD_tree' ? 'NERDTree' :
-        \ &ft == 'unite' ? 'Unite' :
-        \ &ft == 'vimfiler' ? 'VimFiler' :
-        \ &ft == 'vimshell' ? 'VimShell' :
-        \ winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
+"function! MyFileencoding()
+  "return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+"endfunction
 
-function! CtrlPMark()
-  if expand('%:t') =~ 'ControlP'
-    call lightline#link('iR'[g:lightline.ctrlp_regex])
-    return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
-          \ , g:lightline.ctrlp_next], 0)
-  else
-    return ''
-  endif
-endfunction
+"function! MyMode()
+  "let fname = expand('%:t')
+  "return fname == '__Tagbar__' ? 'Tagbar' :
+        "\ fname == 'ControlP' ? 'CtrlP' :
+        "\ fname == '__Gundo__' ? 'Gundo' :
+        "\ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+        "\ fname =~ 'NERD_tree' ? 'NERDTree' :
+        "\ &ft == 'unite' ? 'Unite' :
+        "\ &ft == 'vimfiler' ? 'VimFiler' :
+        "\ &ft == 'vimshell' ? 'VimShell' :
+        "\ winwidth(0) > 60 ? lightline#mode() : ''
+"endfunction
 
-let g:ctrlp_status_func = {
-  \ 'main': 'CtrlPStatusFunc_1',
-  \ 'prog': 'CtrlPStatusFunc_2',
-  \ }
+"function! CtrlPMark()
+  "if expand('%:t') =~ 'ControlP'
+    "call lightline#link('iR'[g:lightline.ctrlp_regex])
+    "return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+          "\ , g:lightline.ctrlp_next], 0)
+  "else
+    "return ''
+  "endif
+"endfunction
 
-function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
-  let g:lightline.ctrlp_regex = a:regex
-  let g:lightline.ctrlp_prev = a:prev
-  let g:lightline.ctrlp_item = a:item
-  let g:lightline.ctrlp_next = a:next
-  return lightline#statusline(0)
-endfunction
+"let g:ctrlp_status_func = {
+  "\ 'main': 'CtrlPStatusFunc_1',
+  "\ 'prog': 'CtrlPStatusFunc_2',
+  "\ }
 
-function! CtrlPStatusFunc_2(str)
-  return lightline#statusline(0)
-endfunction
+"function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+  "let g:lightline.ctrlp_regex = a:regex
+  "let g:lightline.ctrlp_prev = a:prev
+  "let g:lightline.ctrlp_item = a:item
+  "let g:lightline.ctrlp_next = a:next
+  "return lightline#statusline(0)
+"endfunction
 
-let g:tagbar_status_func = 'TagbarStatusFunc'
+"function! CtrlPStatusFunc_2(str)
+  "return lightline#statusline(0)
+"endfunction
 
-function! TagbarStatusFunc(current, sort, fname, ...) abort
-    let g:lightline.fname = a:fname
-  return lightline#statusline(0)
-endfunction
+"let g:tagbar_status_func = 'TagbarStatusFunc'
 
-"
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
+"function! TagbarStatusFunc(current, sort, fname, ...) abort
+    "let g:lightline.fname = a:fname
+  "return lightline#statusline(0)
+"endfunction
 
-let g:unite_force_overwrite_statusline = 0
-let g:vimfiler_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
+""
+"augroup AutoSyntastic
+  "autocmd!
+  "autocmd BufWritePost *.c,*.cpp call s:syntastic()
+"augroup END
+"function! s:syntastic()
+  "SyntasticCheck
+  "call lightline#update()
+"endfunction
+
+"let g:unite_force_overwrite_statusline = 0
+"let g:vimfiler_force_overwrite_statusline = 0
+"let g:vimshell_force_overwrite_statusline = 0
 
 "--------------end of lightline setup------------------"
-"------------------------------------MatchTagAlways-----------------------------
+"------------------------------------Tabularize-----------------------------"
+if exists(":Tabularize")
+  nmap <Leader>t= :Tabularize /=<CR>
+  vmap <Leader>t= :Tabularize /=<CR>
+  nmap <Leader>t: :Tabularize /:<CR>
+  vmap <Leader>t: :Tabularize /:<CR>
+  "nmap <Leader>t: :Tabularize /:\zs<CR>
+  "vmap <Leader>t: :Tabularize /:\zs<CR>
+endif
+"------------------------------------MatchTagAlways------------------------------------"
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
-"---------------------------------------------ctrlp------------------------------------"
+"------------------------------------IndentLine------------------------------------"
+"" Vim
+let g:indentLine_color_term = 239
+"GVim
+let g:indentLine_color_gui = '#12678f'
+" none X terminal
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
+"--------------------------------------ctrlp-------------------------------------------"
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 "------------ control p mappings----------------
-  let g:ctrlp_prompt_mappings = {
-    \ 'PrtBS()':              ['<bs>', '<c-]>'],
-    \ 'PrtDelete()':          ['<del>'],
-    \ 'PrtDeleteWord()':      ['<c-w>'],
-    \ 'PrtClear()':           ['<c-u>'],
-    \ 'PrtSelectMove("j")':   ['<c-j>', '<down>'],
-    \ 'PrtSelectMove("k")':   ['<c-k>', '<up>'],
-    \ 'PrtSelectMove("t")':   ['<Home>', '<kHome>'],
-    \ 'PrtSelectMove("b")':   ['<End>', '<kEnd>'],
-    \ 'PrtSelectMove("u")':   ['<PageUp>', '<kPageUp>'],
-    \ 'PrtSelectMove("d")':   ['<PageDown>', '<kPageDown>'],
-    \ 'PrtHistory(-1)':       ['<c-n>'],
-    \ 'PrtHistory(1)':        ['<c-p>'],
-    \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
-    \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>'],
-    \ 'AcceptSelection("t")': ['<c-t>'],
-    \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
-    \ 'ToggleFocus()':        ['<F1>'],
-    \ 'ToggleRegex()':        ['<F3>'],
-    \ 'ToggleByFname()':      ['<F2>'],
-    \ 'ToggleType(1)':        ['<c-f>', '<c-up>', '<F4>'],
-    \ 'ToggleType(-1)':       ['<c-b>', '<c-down>'],
-    \ 'PrtExpandDir()':       ['<tab>'],
-    \ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],
-    \ 'PrtInsert()':          ['<c-\>'],
-    \ 'PrtCurStart()':        ['<c-a>'],
-    \ 'PrtCurEnd()':          ['<c-e>'],
-    \ 'PrtCurLeft()':         ['<c-h>', '<left>', '<c-^>'],
-    \ 'PrtCurRight()':        ['<c-l>', '<right>'],
-    \ 'PrtClearCache()':      ['<F5>'],
-    \ 'PrtDeleteEnt()':       ['<F7>'],
-    \ 'CreateNewFile()':      ['<c-y>'],
-    \ 'MarkToOpen()':         ['<c-z>'],
-    \ 'OpenMulti()':          ['<c-o>'],
-    \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
-    \ }
+let g:ctrlp_prompt_mappings = {
+      \ 'PrtBS()':              ['<bs>', '<c-]>'],
+      \ 'PrtDelete()':          ['<del>'],
+      \ 'PrtDeleteWord()':      ['<c-w>'],
+      \ 'PrtClear()':           ['<c-u>'],
+      \ 'PrtSelectMove("j")':   ['<c-j>', '<down>'],
+      \ 'PrtSelectMove("k")':   ['<c-k>', '<up>'],
+      \ 'PrtSelectMove("t")':   ['<Home>', '<kHome>'],
+      \ 'PrtSelectMove("b")':   ['<End>', '<kEnd>'],
+      \ 'PrtSelectMove("u")':   ['<PageUp>', '<kPageUp>'],
+      \ 'PrtSelectMove("d")':   ['<PageDown>', '<kPageDown>'],
+      \ 'PrtHistory(-1)':       ['<c-n>'],
+      \ 'PrtHistory(1)':        ['<c-p>'],
+      \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
+      \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>'],
+      \ 'AcceptSelection("t")': ['<c-t>'],
+      \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
+      \ 'ToggleFocus()':        ['<F1>'],
+      \ 'ToggleRegex()':        ['<F3>'],
+      \ 'ToggleByFname()':      ['<F2>'],
+      \ 'ToggleType(1)':        ['<c-f>', '<c-up>', '<F4>'],
+      \ 'ToggleType(-1)':       ['<c-b>', '<c-down>'],
+      \ 'PrtExpandDir()':       ['<tab>'],
+      \ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],
+      \ 'PrtInsert()':          ['<c-\>'],
+      \ 'PrtCurStart()':        ['<c-a>'],
+      \ 'PrtCurEnd()':          ['<c-e>'],
+      \ 'PrtCurLeft()':         ['<c-h>', '<left>', '<c-^>'],
+      \ 'PrtCurRight()':        ['<c-l>', '<right>'],
+      \ 'PrtClearCache()':      ['<F5>'],
+      \ 'PrtDeleteEnt()':       ['<F7>'],
+      \ 'CreateNewFile()':      ['<c-y>'],
+      \ 'MarkToOpen()':         ['<c-z>'],
+      \ 'OpenMulti()':          ['<c-o>'],
+      \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
+      \ }
 
 " my personal mappings
 "
@@ -437,7 +473,7 @@ onoremap <C-f> :S//<left>
 
 nnoremap <C-r> :.,$S///gc<left><left><left><left>
 
-" for windows
+" for windows (does not work in iOS or macvim)
 map <silent> <A-Up> :wincmd k<CR>
 map <silent> <A-Down> :wincmd j<CR>
 map <silent> <A-Left> :wincmd h<CR>
@@ -446,7 +482,6 @@ map <silent> <A-S-Up> :wincmd K<CR>
 map <silent> <A-S-Down> :wincmd J<CR>
 map <silent> <A-S-Left> :wincmd H<CR>
 map <silent> <A-S-Right> :wincmd L<CR>
-map <silent> <A-S-Down> :close <CR>
 
 " for splits
 nnoremap sj :bel sp new<cr>
@@ -488,15 +523,15 @@ map <C-a> <esc>G$vgg
 
 " copy pasting to clipboard
 function! Paste(mode)
-    if a:mode == "v"
-        normal gv
-        normal "+P
-        normal l
-    elseif a:mode == "i"
-        set virtualedit=all
-        normal `^"+gP
-        let &virtualedit = ""
-    endif
+  if a:mode == "v"
+    normal gv
+    normal "+P
+    normal l
+  elseif a:mode == "i"
+    set virtualedit=all
+    normal `^"+gP
+    let &virtualedit = ""
+  endif
 endfunction
 vnoremap <C-x> "+d
 vnoremap <C-c> "+y
@@ -507,45 +542,56 @@ inoremap <C-v> <C-O>:call Paste("i")<CR>
 " visual block now mapped to Ctrl + B
 nnoremap <C-b> <C-v>
 
-" toggling folds
-" F9 Told single fold
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
-"F7 open all folds
-inoremap <F7> zR
-nnoremap <F7> zR
-onoremap <F7> zR
-vnoremap <F7> zR
-"F8 close all folds
-inoremap <F8> zM
-nnoremap <F8> zM
-onoremap <F8> zM
-vnoremap <F8> zM
 " fold methods
 augroup vimrc
-    au BufReadPre * setlocal foldmethod=indent
-    au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 augroup END
-
+" toggling folds
+" F12 Told single fold
+inoremap <F12> <C-O>za :echo "toggle single fold" <cr>
+nnoremap <F12> za      :echo "toggle single fold" <cr>
+onoremap <F12> <C-C>za :echo "toggle single fold" <cr>
+vnoremap <F12> zf      :echo "toggle single fold" <cr>
+"F11 close all folds
+inoremap <F11> zM      :echo "close all fold" <cr>
+nnoremap <F11> zM      :echo "close all fold" <cr>
+onoremap <F11> zM      :echo "close all fold" <cr>
+vnoremap <F11> zM      :echo "close all fold" <cr>
+"F10 open all folds
+inoremap <F10> zR      :echo "open all fold" <cr>
+nnoremap <F10> zR      :echo "open all fold" <cr>
+onoremap <F10> zR      :echo "open all fold" <cr>
+vnoremap <F10> zR      :echo "open all fold" <cr>
 " spell check
-nmap <leader>spell :setlocal spell!<cr>
+inoremap <F9> :setlocal spell!<cr> :echo "spell check Toggle"<cr> 
+nnoremap <F9> :setlocal spell!<cr> :echo "spell check Toggle"<cr>
+onoremap <F9> :setlocal spell!<cr> :echo "spell check Toggle"<cr>
+vnoremap <F9> :setlocal spell!<cr> :echo "spell check Toggle"<cr>
 autocmd FileType gitcommit setlocal spell
 autocmd FileType svn setlocal spell
 autocmd FileType asciidoc setlocal spell
-
 " Syntastic Toggle
-nmap <leader>syntax :SyntasticToggleMode <cr>
+inoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic" 
+nnoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
+onoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
+vnoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
+" Color Tuner Toggle
+inoremap <F1> :Colortuner <cr>  
+nnoremap <F1> :Colortuner <cr> 
+onoremap <F1> :Colortuner <cr> 
+vnoremap <F1> :Colortuner <cr> 
 
 "trailing whitespaces
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 "vimgrep"
+autocmd BufEnter * silent! lcd %:p:h
 nnoremap <Leader>grep :lvimgrep /a/gj %<CR><bar>:lopen<CR><bar>:lvimgrep //gj **/**<left><left><left><left><left><left><left><left><left>
+set switchbuf+=usetab,newtab "used for quickfix windows, open things in new tab
 "look at all snippets"
 nmap <Leader>snip i<C-R><tab>
-nmap <F5> :call ReloadAllSnippets()
+nmap <F5> :call ReloadAllSnippets()<CR>
 
 "CoffeeScript"
 nmap <silent>ccv :CoffeeCompile \| vertical cwindow<CR>
