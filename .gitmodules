@@ -1,0 +1,6 @@
+[submodule ".vim/bundle/MatchTagAlways"]
+	path = .vim/bundle/MatchTagAlways
+	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule ".vim/bundle/javascript-libraries-syntax"]
+	path = .vim/bundle/javascript-libraries-syntax
+	url = https://github.com/othree/javascript-libraries-syntax.vim
