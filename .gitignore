@@ -5,3 +5,5 @@
 !.bash_profile
 !.bashrc
 !.gitignore
+!.gitmodules
+!.git
