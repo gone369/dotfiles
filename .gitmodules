@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/indentLine"]
 	path = .vim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule ".vim/bundle/vim-snipmate"]
-	path = .vim/bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
 [submodule ".vim/bundle/vim-repmo"]
 	path = .vim/bundle/vim-repmo
 	url = https://github.com/vim-scripts/repmo.vim.git
@@ -97,3 +94,6 @@
 [submodule ".vim/bundle/vim-nerdcommenter"]
 	path = .vim/bundle/vim-nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/vim-tlib"]
+	path = .vim/bundle/vim-tlib
+	url = https://github.com/tomtom/tlib_vim.git
