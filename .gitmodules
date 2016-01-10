@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/vim-snipmate"]
 	path = .vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/vim-repmo"]
+	path = .vim/bundle/vim-repmo
+	url = https://github.com/vim-scripts/repmo.vim.git
