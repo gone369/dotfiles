@@ -1,6 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/Xun/Library'
-let g:netrw_dirhist_2='/Users/Xun'
-let g:netrw_dirhist_3='/Users/Xun/Documents/Code/web/spingle/public/lib/foundation'
-let g:netrw_dirhist_4='/Users/Xun/.vim/bundle/abolish'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/Xun/.git/modules/.vim'
+let g:netrw_dirhist_2='/Users/Xun/.git/modules/.vim/bundle'
+let g:netrw_dirhist_3='/Users/Xun/.git/modules/.vim/bundle/vim-nerdcommenter'
