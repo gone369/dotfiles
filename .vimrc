@@ -396,10 +396,10 @@ set laststatus=2
 "--------------end of lightline setup------------------"
 "------------------------------------Tabularize-----------------------------"
 if exists(":Tabularize")
-  nmap <Leader>t= :Tabularize /=<CR>
-  vmap <Leader>t= :Tabularize /=<CR>
-  nmap <Leader>t: :Tabularize /:<CR>
-  vmap <Leader>t: :Tabularize /:<CR>
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:<CR>
+  vmap <Leader>a: :Tabularize /:<CR>
   "nmap <Leader>t: :Tabularize /:\zs<CR>
   "vmap <Leader>t: :Tabularize /:\zs<CR>
 endif
