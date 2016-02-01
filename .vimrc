@@ -194,7 +194,7 @@ let g:syntastic_always_populate_loc_list = 1
 nnoremap ]l :lnext<CR>
 nnoremap [l :lprev<CR>
 
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
 " Set up the arrays to ignore for later
 if !exists('g:syntastic_html_tidy_ignore_errors')
@@ -396,10 +396,10 @@ set laststatus=2
 "--------------end of lightline setup------------------"
 "------------------------------------Tabularize-----------------------------"
 if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:<CR>
-  vmap <Leader>a: :Tabularize /:<CR>
+  nmap e= :Tabularize /= <cr>
+  vmap e= :Tabularize /= <CR>
+  nmap e: :Tabularize /:<CR>
+  vmap e: :Tabularize /:<CR>
   "nmap <Leader>t: :Tabularize /:\zs<CR>
   "vmap <Leader>t: :Tabularize /:\zs<CR>
 endif

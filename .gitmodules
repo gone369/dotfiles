@@ -103,3 +103,6 @@
 [submodule ".vim/bundle/vim-match-tag-always"]
 	path = .vim/bundle/vim-match-tag-always
 	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule ".vim/bundle/vim-jade"]
+	path = .vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
