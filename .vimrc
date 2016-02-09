@@ -100,7 +100,7 @@ autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 "
 let g:javascript_enable_domhtmlcss = 1
 let b:javascript_fold = 1
-"let g:jsx_ext_required = 0
+let g:jsx_ext_required = 0
 
 "---- deletes highlighting after search by pressing esc
 nnoremap <silent> <CR> :nohl <cr><cr>
