@@ -97,6 +97,9 @@ autocmd BufReadPre *.js let g:used_javascript_libs = 'underscore,angularjs,angul
 "autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
 "autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
 "autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+"
+let g:javascript_enable_domhtmlcss = 1
+let g:jsx_ext_required = 0
 
 "---- deletes highlighting after search by pressing esc
 nnoremap <silent> <CR> :nohl <cr><cr>
