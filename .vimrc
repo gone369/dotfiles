@@ -171,6 +171,16 @@ let g:html_indent_inctags = "html,body,head,tbody,article,aside,details,figcapti
 
 
 "----------------------------------------PLUGINS -------------------------
+"---------------------------------------multiple-cursor
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-j>'
+let g:multi_cursor_prev_key='<C-k>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_start_key='<C-j>'
+let g:multi_cursor_start_word_key='g<C-j>'
+"---------------------------------------sparkup
+autocmd FileType javascript.jsx runtime! ftplugin/html/sparkup.vim
 "---------------------------------------------pathogen
 call pathogen#infect()
 "---------------------------------------------colortuner
