@@ -8,6 +8,14 @@ function base {
   'made directories'
 }
 
+function git {
+  # Some git defaults
+  git config --global color.ui true
+  git config --global push.default simple
+  cd ~
+  git submodule update --init --recursive
+}
+
 function finish {
   cd ~
   if [ ! -d 'terminalrootconfig' ]; then
@@ -15,6 +23,7 @@ function finish {
   fi
   cp -r terminalrootconfig/. ~
   rm -rf terminalrootconfig
+  git
 }
 
 #modules
@@ -79,11 +88,6 @@ function brew {
   brew cask install ${apps[@]}
 }
 
-function git {
-  # Some git defaults
-  git config --global color.ui true
-  git config --global push.default simple
-}
 
 
 #operating systems
@@ -91,7 +95,6 @@ function mac {
   echo 'install mac'
   x-code-select --install
   brew
-  git
   nvm
   npm
 }
@@ -101,7 +104,6 @@ function linux {
   sudo apt-get update
   nvm
   npm
-  git
 }
 
 #main 
