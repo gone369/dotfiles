@@ -179,8 +179,11 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 let g:multi_cursor_start_key='<C-j>'
 let g:multi_cursor_start_word_key='g<C-j>'
+let g:multi_cursor_exit_from_visual_mode=1
+let g:multi_cursor_exit_from_insert_mode=0
 "---------------------------------------sparkup
 autocmd FileType javascript.jsx runtime! ftplugin/html/sparkup.vim
+let g:sparkupNextMapping=''
 "---------------------------------------------pathogen
 call pathogen#infect()
 "---------------------------------------------colortuner
