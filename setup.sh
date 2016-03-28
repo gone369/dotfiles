@@ -34,8 +34,8 @@ function nvm {
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
   fi
   echo 'installing npm'
-  nvm install stable
-  nvm alias default stable
+  nvm install node
+  nvm alias default node
 }
 
 function npm {

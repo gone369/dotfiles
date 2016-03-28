@@ -79,16 +79,10 @@ alias mv="mv -v"
 alias cp="cp -v"
 alias grep="grepe"
 
-
-
-
-
-##
-# Your previous /Users/Xun/.bash_profile file was backed up as /Users/Xun/.bash_profile.macports-saved_2015-05-10_at_21:35:45
-##
-
-# MacPorts Installer addition on 2015-05-10_at_21:35:45: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
