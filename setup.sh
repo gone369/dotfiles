@@ -1,14 +1,15 @@
 function base {
+  sudo -s
   if [ ! -d '/usr/local/lib' ]; then
-    mkdir -p "/usr/local/lib"
+    sudo mkdir -p "/usr/local/lib"
   fi
   if [ ! -d '/usr/local/bin' ]; then
-    mkdir -p "/usr/local/bin"
+    sudo mkdir -p "/usr/local/bin"
   fi
   'made directories'
 }
 
-function git {
+function rungit {
   # Some git defaults
   git config --global color.ui true
   git config --global push.default simple
@@ -23,22 +24,23 @@ function finish {
   fi
   cp -r terminalrootconfig/. ~
   rm -rf terminalrootconfig
-  git
+  rungit
 }
 
 #modules
-function nvm {
+function runnvm {
   # Install nvm
   if test ! $(which nvm); then
     echo "Installing nvm..."
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
   fi
   echo 'installing npm'
+  source ~/.bash_rc
   nvm install node
   nvm alias default node
 }
 
-function npm {
+function runnpm {
   echo 'installing npm modules'
   modules=(
     grunt-cli
@@ -70,6 +72,7 @@ function brew {
   brew install git
   echo 'installing macvim...'
   brew install macvim 
+  brew install iterm2
 
   #brew cask
   echo 'installing brew cask...'
@@ -79,7 +82,6 @@ function brew {
     firefox
     puush
     skype
-    totalterminal
     insomniax
     postman
   )
@@ -94,16 +96,16 @@ function brew {
 function mac {
   echo 'install mac'
   x-code-select --install
-  brew
-  nvm
-  npm
+  runbrew
+  runnvm
+  runnpm
 }
 
 function linux {
   echo 'install linux'
   sudo apt-get update
-  nvm
-  npm
+  runnvm
+  runnpm
 }
 
 #main 
