@@ -14,6 +14,7 @@ function rungit {
   git config --global color.ui true
   git config --global push.default simple
   cd ~
+  git clone https://github.com/altercation/solarized.git terminaltheme
   git submodule update --init --recursive
 }
 
@@ -73,6 +74,7 @@ function brew {
   echo 'installing macvim...'
   brew install macvim 
   brew install iterm2
+  brew install htop
 
   #brew cask
   echo 'installing brew cask...'

@@ -62,6 +62,7 @@ function grepe(){
   grep --color -Er $1 $2
 }
 
+
 alias cd='cs'
 alias aliases='vim ~/.bash_profile'
 alias ..='cd ../'
@@ -78,6 +79,7 @@ alias mvimt="open -a MacVim"
 alias mv="mv -v"
 alias cp="cp -v"
 alias grep="grepe"
+alias tmuxhelp="cat ~/.tmuxhelp.txt"
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 

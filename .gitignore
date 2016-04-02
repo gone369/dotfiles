@@ -8,4 +8,6 @@
 !.gitmodules
 !.git
 !setup.sh
-!.terminaltheme
+!.tmux.conf
+!.tmuxhelp.txt
+!bootstrap_vm.sh
