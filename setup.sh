@@ -75,6 +75,7 @@ function brew {
   brew install macvim 
   brew install iterm2
   brew install htop
+  brew install tidy-html5
 
   #brew cask
   echo 'installing brew cask...'
