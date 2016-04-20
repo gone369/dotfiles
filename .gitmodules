@@ -115,3 +115,15 @@
 [submodule ".vim/bundle/vim-sh-indent"]
 	path = .vim/bundle/vim-sh-indent
 	url = https://github.com/chrisbra/vim-sh-indent.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby
+[submodule ".vim/bundle/vim-textobj-rubyblock"]
+	path = .vim/bundle/vim-textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock
+[submodule ".vim/bundle/ruby-matchit"]
+	path = .vim/bundle/ruby-matchit
+	url = https://github.com/vim-scripts/ruby-matchit
+[submodule ".vim/bundle/vim-textobj-user"]
+	path = .vim/bundle/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user.git

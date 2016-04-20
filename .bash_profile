@@ -81,7 +81,15 @@ alias cp="cp -v"
 alias grep="grepe"
 alias tmuxhelp="cat ~/.tmuxhelp.txt"
 
+#ssh servers
+alias sshak15="ssh root@10.63.77.200"
+alias sshak17="ssh root@10.63.77.202"
+alias sshak19="ssh root@10.63.77.205"
+alias sshak22="ssh root@10.63.74.13"
+alias sshak28="ssh root@ak0028.targethpc.com"
+
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+alias tmux="TERM=screen-256color-bce tmux"
 
 #nvm
 export NVM_DIR="$HOME/.nvm"

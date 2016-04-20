@@ -115,8 +115,8 @@ nnoremap <silent> <CR> :nohl <cr><cr>
 
 " Only do this part when compiled with support for autocommands.
 "
-filetype plugin indent on
 if has("autocmd")
+  filetype plugin indent on
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -179,6 +179,9 @@ function! DiffToggle()
 
 
   "----------------------------------------PLUGINS -------------------------
+  "----------ruby matchit
+  runtime macros/matchit.vim
+  "---------------textObj
   "---------------------------------------multiple-cursor
   let g:multi_cursor_use_default_mapping=0
   let g:multi_cursor_next_key='<C-j>'
