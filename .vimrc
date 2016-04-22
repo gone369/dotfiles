@@ -552,9 +552,6 @@ function! DiffToggle()
   nmap <silent> <C-y> :red <CR>
   map <silent> <C-y> :red <CR>
 
-  " select all
-  map <C-a> <esc>G$vgg
-
   " copy pasting to clipboard
   function! Paste(mode)
     if a:mode == "v"
@@ -635,6 +632,4 @@ function! DiffToggle()
   "nmap <silent>clh :CoffeeLint \| horizontal cwindow<CR><C-w>=
   "nmap <silent>clV :'<,'>CoffeeLint \| vertical cwindow<CR><C-w>=
   "vnoremap <silent>cr :CoffeeRun<CR>
-
-
 
