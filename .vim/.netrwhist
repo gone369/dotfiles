@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/Xun/.git/modules/.vim'
 let g:netrw_dirhist_2='/Users/Xun/.git/modules/.vim/bundle'
 let g:netrw_dirhist_3='/Users/Xun/.git/modules/.vim/bundle/vim-nerdcommenter'
+let g:netrw_dirhist_4='/Users/z00201y/Documents/Code/election2016/bower_components'
+let g:netrw_dirhist_5='/Users/z00201y/Documents/Code/stream_graph/src/client/view/projects'
