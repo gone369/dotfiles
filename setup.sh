@@ -66,7 +66,7 @@ function runnpm {
   npm install -g ${modules[@]}
 }
 
-function brew {
+function runbrew {
   #test if homebrew is installed
   if test ! $(which brew); then
     echo "Installing homebrew..."
@@ -82,6 +82,9 @@ function brew {
   brew install iterm2
   brew install htop
   brew install tidy-html5
+
+  brew tap universal-ctags/universal-ctags
+  brew install --HEAD universal-ctags
 
   #brew cask
   echo 'installing brew cask...'
