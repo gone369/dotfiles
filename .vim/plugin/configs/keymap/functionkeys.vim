@@ -19,6 +19,28 @@ inoremap <F10> zR      :echo "open all fold" <cr>
 nnoremap <F10> zR      :echo "open all fold" <cr>
 onoremap <F10> zR      :echo "open all fold" <cr>
 vnoremap <F10> zR      :echo "open all fold" <cr>
+
+inoremap <F9> :TagbarToggle<CR>
+nnoremap <F9> :TagbarToggle<CR>
+onoremap <F9> :TagbarToggle<CR>
+vnoremap <F9> :TagbarToggle<CR>
+
+" Syntastic Toggle
+inoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic" 
+nnoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
+onoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
+vnoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
+
+inoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :GundoToggle<CR>
+onoremap <F5> :GundoToggle<CR>
+vnoremap <F5> :GundoToggle<CR>
+
+
+"look at all snippets"
+nmap <Leader>snip i<C-R><tab>
+nmap <F4> :call ReloadAllSnippets()<CR>
+
 " spell check
 inoremap <F3> :setlocal spell!<cr> :echo "spell check Toggle"<cr> 
 nnoremap <F3> :setlocal spell!<cr> :echo "spell check Toggle"<cr>
@@ -28,15 +50,11 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType svn setlocal spell
 autocmd FileType asciidoc setlocal spell
 
-" Syntastic Toggle
-inoremap <F2> :SyntasticToggleMode <cr> :echo "Toggling Syntastic" 
-nnoremap <F2> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
-onoremap <F2> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
-vnoremap <F2> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
 
-"look at all snippets"
-nmap <Leader>snip i<C-R><tab>
-nmap <F4> :call ReloadAllSnippets()<CR>
+inoremap <F2> :Startify <cr>  
+nnoremap <F2> :Startify <cr> 
+onoremap <F2> :Startify <cr> 
+vnoremap <F2> :Startify <cr> 
 
 " Color Tuner Toggle
 inoremap <F1> :Colortuner <cr>  

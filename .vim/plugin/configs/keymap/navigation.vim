@@ -23,7 +23,6 @@ nnoremap sl :rightb vsp new<cr>
 "
 map <silent> <C-Left> :tabp<CR>
 map <silent> <C-Right> :tabn<CR>
-map <C-Up> :tabnew <CR>
 
 map <silent> <C-S-Left> :tabm -1 <CR>
 map <silent> <C-S-Right> :tabm +1 <CR>
@@ -32,3 +31,5 @@ map <silent> <C-S-Right> :tabm +1 <CR>
 map <C-Down> :wq<CR>
 "quit tab
 map <C-S-Down> :q!<CR>
+
+map <C-Up> :tabnew <CR> 

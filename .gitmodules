@@ -127,3 +127,18 @@
 [submodule ".vim/bundle/vim-textobj-user"]
 	path = .vim/bundle/vim-textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
+[submodule ".vim/bundle/vim-tagbar"]
+	path = .vim/bundle/vim-tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule ".vim/bundle/vim-easytags"]
+	path = .vim/bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
+[submodule ".vim/bundle/vim-startify"]
+	path = .vim/bundle/vim-startify
+	url = https://github.com/mhinz/vim-startify
+[submodule ".vim/bundle/gundo.vim"]
+	path = .vim/bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim

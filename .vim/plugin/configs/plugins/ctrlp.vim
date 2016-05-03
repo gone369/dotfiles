@@ -37,3 +37,5 @@ let g:ctrlp_prompt_mappings = {
       \ 'OpenMulti()':          ['<c-o>'],
       \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
       \ }
+
+let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'undo', 'line', 'changes', 'mixed']

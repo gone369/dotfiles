@@ -9,7 +9,3 @@ execute pathogen#infect()
 if v:progname =~? "evim"
     finish
 endif
-
-
-
-
