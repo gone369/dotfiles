@@ -36,7 +36,13 @@ function runnvm {
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
   fi
   echo 'installing npm'
-  source ~/.bash_rc
+  if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+  else
+    touch ~/.bashrc
+    source ~/.bashrc
+    source ~/.bash_profile
+  fi
   nvm install node
   nvm alias default node
 }
