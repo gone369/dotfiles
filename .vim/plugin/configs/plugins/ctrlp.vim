@@ -39,3 +39,8 @@ let g:ctrlp_prompt_mappings = {
       \ }
 
 let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'undo', 'line', 'changes', 'mixed']
+let g:ctrlp_by_filename = 1
+let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*' " MacOSX/Linux
+let g:ctrlp_mruf_exclude = '^C:\\dev\\tmp\\.*' " Windows
+let g:ctrlp_mruf_exclude = '\.log$|\.error$' 
+

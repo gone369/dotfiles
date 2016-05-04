@@ -62,7 +62,6 @@ function grepe(){
   grep --color -Er $1 $2
 }
 
-
 alias cd='cs'
 alias aliases='vim ~/.bash_profile'
 alias ..='cd ../'
@@ -80,12 +79,13 @@ alias mv="mv -v"
 alias cp="cp -v"
 alias grep="grepe"
 alias tmuxhelp="cat ~/.tmuxhelp.txt"
+alias v="sh ~/.vim/scripts/vim.sh"
 
 #ssh servers
-alias sshak15="ssh root@10.63.77.200"
-alias sshak17="ssh root@10.63.77.202"
-alias sshak19="ssh root@10.63.77.205"
-alias sshak22="ssh root@10.63.74.13"
+alias sshak15="ssh root@ak0015.targethpc.com"
+alias sshak17="ssh root@ak0017.targethpc.com"
+alias sshak19="ssh root@ak0019.targethpc.com"
+alias sshak22="ssh root@ak0022.targethpc.com"
 alias sshak28="ssh root@ak0028.targethpc.com"
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
