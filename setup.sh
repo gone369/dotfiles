@@ -58,7 +58,9 @@ function runnpm {
     babel-eslint
     eslint
     eslint-plugin-react
+    eslint-plugin-angular
     jshint
+    esctags
     npm-check-updates
     react-tools
     syntastic-react
@@ -82,6 +84,7 @@ function runbrew {
   brew install iterm2
   brew install htop
   brew install tidy-html5
+  brew install the_silver_searcher
 
   brew tap universal-ctags/universal-ctags
   brew install --HEAD universal-ctags

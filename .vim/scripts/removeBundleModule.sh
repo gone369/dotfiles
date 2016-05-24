@@ -53,11 +53,13 @@ if is_gitroot; then
   # finally check whether the given path is a submodule
   if $(is_submodule "${1}"); then
     echo "let's remove those submodules"
+    echo ${1%/}
     # using ${1%/} to remove trailing slashes
+    git rm --cached ${1%/}
     git config -f .gitmodules --remove-section submodule.${1%/}
     git config -f .git/config --remove-section submodule.${1%/}
-    git rm --cached ${1%/}
     rm -rf ${1%/}
+    rm -rf .git/modules/${1%/}
   else
     echo "git submodule rm is not recursive yet, aborting."
   fi

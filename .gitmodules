@@ -139,3 +139,27 @@
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim
+[submodule ".vim/bundle/targets.vim"]
+	path = .vim/bundle/targets.vim
+	url = https://github.com/wellle/targets.vim
+[submodule ".vim/bundle/vim-visual-increment"]
+	path = .vim/bundle/vim-visual-increment
+	url = https://github.com/triglav/vim-visual-increment.git
+[submodule ".vim/bundle/smartgf.vim"]
+	path = .vim/bundle/smartgf.vim
+	url = https://github.com/gorkunov/smartgf.vim.git
+[submodule ".vim/bundle/clever-f.vim"]
+	path = .vim/bundle/clever-f.vim
+	url = https://github.com/rhysd/clever-f.vim
+[submodule ".vim/bundle/camelcasemotion"]
+	path = .vim/bundle/camelcasemotion
+	url = https://github.com/bkad/camelcasemotion
+[submodule ".vim/bundle/vim-choosewin"]
+	path = .vim/bundle/vim-choosewin
+	url = https://github.com/t9md/vim-choosewin
+[submodule ".vim/bundle/vim-quickrun"]
+	path = .vim/bundle/vim-quickrun
+	url = https://github.com/thinca/vim-quickrun

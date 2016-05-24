@@ -26,6 +26,7 @@ map <silent> <C-Right> :tabn<CR>
 
 map <silent> <C-S-Left> :tabm -1 <CR>
 map <silent> <C-S-Right> :tabm +1 <CR>
+map <silent> <C-S-Up> :tab split<CR>
 
 " save tab
 map <C-Down> :wq<CR>
