@@ -11,7 +11,7 @@ set shortmess=aoO
 badd +7 tabularize.vim
 badd +1 nerdtree.vim
 badd +1 startify.vim
-badd +0 ~/.vim/bundle/vim-startify/doc/startify.txt
+badd +1 ~/.vim/bundle/vim-startify/doc/startify.txt
 argglobal
 silent! argdel *
 set stal=2
@@ -29,7 +29,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 7 - ((5 * winheight(0) + 26) / 52)
+let s:l = 7 - ((5 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -50,7 +50,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 26) / 52)
+let s:l = 1 - ((0 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -65,20 +65,20 @@ split
 wincmd w
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 25 + 27) / 55)
-exe '2resize ' . ((&lines * 26 + 27) / 55)
+exe '1resize ' . ((&lines * 26 + 28) / 57)
+exe '2resize ' . ((&lines * 27 + 28) / 57)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
+setlocal fdl=1
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
 8,16fold
-let s:l = 42 - ((4 * winheight(0) + 12) / 25)
+let s:l = 42 - ((4 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -95,7 +95,7 @@ setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal nofen
+setlocal fen
 silent! normal! zE
 3,3fold
 3,4fold
@@ -5184,7 +5184,7 @@ normal! zc
 normal! zc
 872
 normal! zc
-let s:l = 775 - ((23 * winheight(0) + 13) / 26)
+let s:l = 775 - ((24 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -5192,9 +5192,9 @@ normal! zt
 normal! 042|
 lcd ~/.vim/bundle/vim-startify/doc
 wincmd w
-exe '1resize ' . ((&lines * 25 + 27) / 55)
-exe '2resize ' . ((&lines * 26 + 27) / 55)
-tabnext 3
+exe '1resize ' . ((&lines * 26 + 28) / 57)
+exe '2resize ' . ((&lines * 27 + 28) / 57)
+tabnext 1
 set stal=1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

@@ -1,5 +1,5 @@
 #!/bin/bash
-usage() { echo "Usage: $0 [add|remove|update] [<giturl>|<bundle folder path>|]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [add|remove|update] [<giturl>|<bundle folder name>|]" 1>&2; exit 1; }
 
 function checkUrl(){
   urlregex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
@@ -21,19 +21,21 @@ function add {
   fi
   echo "add $1"
   pushd ~/.vim/bundle
-  git submodule add $1
+  git submodule add --force $1
   popd
   exit 0
 }
 function remove {
-  if [ ! -d "$1" ]; then
+  pushd ~
+  p=".vim/bundle/$1"
+  if [ ! -d "${p}" ]; then
     echo "directory does not exist"
     usage
     exit 1
   fi
   echo "remove $1"
-  pushd ~
-  sh ~/.vim/scripts/removeBundleModule.sh $1
+  bundlepath=".vim/bundle/$1"
+  sh ~/.vim/scripts/removeBundleModule.sh $bundlepath
   popd
   exit 0
 }
@@ -54,8 +56,6 @@ function checkEmpty(){
 }
 
 
-p="$(pwd)/$2"
-
 case ${1} in
   add)
     checkEmpty $2
@@ -63,7 +63,7 @@ case ${1} in
     ;;
   remove)
     checkEmpty $2
-    remove $p
+    remove $2
     ;;
   update)
     update

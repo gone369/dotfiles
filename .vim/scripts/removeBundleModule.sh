@@ -53,6 +53,7 @@ if is_gitroot; then
   # finally check whether the given path is a submodule
   if $(is_submodule "${1}"); then
     echo "let's remove those submodules"
+    echo ${1%/}
     # using ${1%/} to remove trailing slashes
     git rm --cached ${1%/}
     git config -f .gitmodules --remove-section submodule.${1%/}
