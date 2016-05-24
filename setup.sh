@@ -58,6 +58,7 @@ function runnpm {
     babel-eslint
     eslint
     eslint-plugin-react
+    eslint-plugin-angular
     jshint
     npm-check-updates
     react-tools

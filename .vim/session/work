@@ -9,8 +9,9 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +7 tabularize.vim
-badd +0 nerdtree.vim
-badd +0 startify.vim
+badd +1 nerdtree.vim
+badd +1 startify.vim
+badd +0 ~/.vim/bundle/vim-startify/doc/startify.txt
 argglobal
 silent! argdel *
 set stal=2
@@ -28,7 +29,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 30) / 60)
+let s:l = 7 - ((5 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -49,7 +50,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 30) / 60)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -64,8 +65,8 @@ split
 wincmd w
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 29 + 31) / 63)
-exe '2resize ' . ((&lines * 30 + 31) / 63)
+exe '1resize ' . ((&lines * 25 + 27) / 55)
+exe '2resize ' . ((&lines * 26 + 27) / 55)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -77,12 +78,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 8,16fold
-let s:l = 46 - ((9 * winheight(0) + 14) / 29)
+let s:l = 42 - ((4 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-46
-normal! 048|
+42
+normal! 021|
 lcd ~/.vim/plugin/configs/plugins
 wincmd w
 argglobal
@@ -1227,7 +1228,3963 @@ silent! normal! zE
 907,907fold
 872,916fold
 872,916fold
-let s:l = 775 - ((26 * winheight(0) + 15) / 30)
+3
+normal! zo
+3
+normal! zo
+3
+normal! zo
+3
+normal! zo
+3
+normal! zo
+3
+normal! zo
+3
+normal! zo
+3
+normal! zc
+3
+normal! zc
+3
+normal! zc
+9
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zo
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+10
+normal! zc
+9
+normal! zc
+3
+normal! zc
+3
+normal! zc
+3
+normal! zc
+3
+normal! zc
+26
+normal! zo
+26
+normal! zc
+73
+normal! zo
+75
+normal! zo
+75
+normal! zc
+73
+normal! zc
+88
+normal! zo
+88
+normal! zc
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zo
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+120
+normal! zc
+122
+normal! zo
+122
+normal! zc
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zo
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+129
+normal! zc
+131
+normal! zo
+131
+normal! zc
+168
+normal! zo
+168
+normal! zo
+169
+normal! zo
+169
+normal! zo
+169
+normal! zo
+169
+normal! zc
+169
+normal! zc
+169
+normal! zc
+168
+normal! zc
+168
+normal! zc
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zo
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+182
+normal! zc
+184
+normal! zo
+184
+normal! zc
+192
+normal! zo
+192
+normal! zc
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zo
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+197
+normal! zc
+199
+normal! zo
+199
+normal! zc
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zo
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+204
+normal! zc
+206
+normal! zo
+206
+normal! zc
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zo
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+213
+normal! zc
+215
+normal! zo
+215
+normal! zc
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zo
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+226
+normal! zc
+228
+normal! zo
+228
+normal! zc
+232
+normal! zo
+232
+normal! zc
+237
+normal! zo
+237
+normal! zc
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zo
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+240
+normal! zc
+242
+normal! zo
+242
+normal! zc
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zo
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+247
+normal! zc
+249
+normal! zo
+249
+normal! zc
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zo
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+254
+normal! zc
+256
+normal! zo
+256
+normal! zc
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zo
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+264
+normal! zc
+266
+normal! zo
+266
+normal! zo
+267
+normal! zo
+267
+normal! zc
+266
+normal! zc
+266
+normal! zc
+283
+normal! zo
+283
+normal! zo
+284
+normal! zo
+284
+normal! zo
+284
+normal! zc
+284
+normal! zc
+283
+normal! zc
+283
+normal! zc
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zo
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+291
+normal! zc
+293
+normal! zo
+293
+normal! zc
+300
+normal! zo
+300
+normal! zc
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zo
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+303
+normal! zc
+305
+normal! zo
+305
+normal! zc
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zo
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+309
+normal! zc
+311
+normal! zo
+311
+normal! zc
+326
+normal! zo
+326
+normal! zc
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zo
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+331
+normal! zc
+333
+normal! zo
+333
+normal! zc
+340
+normal! zo
+340
+normal! zc
+344
+normal! zo
+344
+normal! zc
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zo
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+353
+normal! zc
+355
+normal! zo
+355
+normal! zc
+366
+normal! zo
+366
+normal! zo
+367
+normal! zo
+367
+normal! zo
+367
+normal! zc
+367
+normal! zc
+366
+normal! zc
+366
+normal! zc
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zo
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+373
+normal! zc
+375
+normal! zo
+375
+normal! zc
+384
+normal! zo
+384
+normal! zo
+385
+normal! zo
+385
+normal! zo
+385
+normal! zc
+385
+normal! zc
+384
+normal! zc
+384
+normal! zc
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zo
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+389
+normal! zc
+391
+normal! zo
+391
+normal! zc
+402
+normal! zo
+402
+normal! zc
+406
+normal! zo
+406
+normal! zc
+416
+normal! zo
+416
+normal! zc
+419
+normal! zo
+419
+normal! zo
+419
+normal! zc
+419
+normal! zc
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zo
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+422
+normal! zc
+424
+normal! zo
+424
+normal! zc
+432
+normal! zo
+432
+normal! zc
+436
+normal! zo
+436
+normal! zo
+437
+normal! zo
+437
+normal! zo
+437
+normal! zo
+437
+normal! zc
+437
+normal! zc
+437
+normal! zc
+436
+normal! zc
+436
+normal! zc
+448
+normal! zo
+448
+normal! zo
+449
+normal! zo
+449
+normal! zo
+449
+normal! zo
+449
+normal! zc
+449
+normal! zc
+449
+normal! zc
+448
+normal! zc
+448
+normal! zc
+453
+normal! zo
+453
+normal! zc
+459
+normal! zo
+459
+normal! zc
+465
+normal! zo
+465
+normal! zo
+466
+normal! zo
+466
+normal! zo
+466
+normal! zc
+466
+normal! zc
+465
+normal! zc
+465
+normal! zc
+477
+normal! zo
+477
+normal! zo
+478
+normal! zo
+478
+normal! zo
+478
+normal! zc
+478
+normal! zc
+477
+normal! zc
+477
+normal! zc
+487
+normal! zo
+487
+normal! zo
+488
+normal! zo
+488
+normal! zo
+488
+normal! zc
+488
+normal! zc
+487
+normal! zc
+487
+normal! zc
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zo
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+495
+normal! zc
+502
+normal! zo
+502
+normal! zo
+503
+normal! zo
+503
+normal! zc
+502
+normal! zc
+502
+normal! zc
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zo
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+508
+normal! zc
+510
+normal! zo
+510
+normal! zc
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zo
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+515
+normal! zc
+517
+normal! zo
+517
+normal! zc
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zo
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+523
+normal! zc
+525
+normal! zo
+525
+normal! zc
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zo
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+532
+normal! zc
+534
+normal! zo
+534
+normal! zc
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zo
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+542
+normal! zc
+544
+normal! zo
+544
+normal! zc
+563
+normal! zo
+563
+normal! zc
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zo
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+567
+normal! zc
+569
+normal! zo
+569
+normal! zc
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zo
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+572
+normal! zc
+575
+normal! zo
+575
+normal! zc
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zo
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+580
+normal! zc
+582
+normal! zo
+582
+normal! zc
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zo
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+589
+normal! zc
+591
+normal! zo
+591
+normal! zc
+601
+normal! zo
+601
+normal! zc
+605
+normal! zo
+605
+normal! zc
+609
+normal! zo
+609
+normal! zc
+614
+normal! zo
+614
+normal! zc
+618
+normal! zo
+618
+normal! zc
+622
+normal! zo
+622
+normal! zc
+630
+normal! zo
+630
+normal! zc
+637
+normal! zo
+637
+normal! zc
+645
+normal! zo
+645
+normal! zo
+647
+normal! zo
+647
+normal! zo
+647
+normal! zo
+647
+normal! zo
+647
+normal! zo
+647
+normal! zo
+647
+normal! zo
+647
+normal! zc
+647
+normal! zc
+647
+normal! zc
+647
+normal! zc
+647
+normal! zc
+647
+normal! zc
+647
+normal! zc
+645
+normal! zc
+645
+normal! zc
+662
+normal! zo
+662
+normal! zc
+673
+normal! zo
+673
+normal! zo
+679
+normal! zo
+679
+normal! zo
+679
+normal! zo
+679
+normal! zo
+679
+normal! zo
+679
+normal! zo
+679
+normal! zo
+679
+normal! zc
+679
+normal! zc
+679
+normal! zc
+679
+normal! zc
+679
+normal! zc
+679
+normal! zc
+679
+normal! zc
+673
+normal! zc
+673
+normal! zc
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zo
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+689
+normal! zc
+695
+normal! zo
+695
+normal! zc
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zo
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+698
+normal! zc
+703
+normal! zo
+703
+normal! zc
+710
+normal! zo
+710
+normal! zc
+712
+normal! zo
+712
+normal! zo
+712
+normal! zo
+712
+normal! zc
+712
+normal! zc
+712
+normal! zc
+714
+normal! zo
+714
+normal! zc
+716
+normal! zo
+716
+normal! zo
+716
+normal! zo
+716
+normal! zc
+716
+normal! zc
+716
+normal! zc
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zo
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+722
+normal! zc
+732
+normal! zo
+732
+normal! zc
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zo
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+735
+normal! zc
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zo
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+741
+normal! zc
+746
+normal! zo
+746
+normal! zc
+751
+normal! zo
+751
+normal! zc
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zo
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+754
+normal! zc
+759
+normal! zo
+759
+normal! zo
+760
+normal! zo
+760
+normal! zo
+760
+normal! zo
+760
+normal! zo
+760
+normal! zo
+760
+normal! zc
+760
+normal! zc
+760
+normal! zc
+760
+normal! zc
+760
+normal! zc
+759
+normal! zc
+759
+normal! zc
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zo
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+767
+normal! zc
+772
+normal! zo
+772
+normal! zc
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zo
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+775
+normal! zc
+780
+normal! zo
+780
+normal! zo
+781
+normal! zo
+781
+normal! zo
+783
+normal! zo
+783
+normal! zc
+781
+normal! zc
+781
+normal! zc
+780
+normal! zc
+780
+normal! zc
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zo
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+789
+normal! zc
+795
+normal! zo
+795
+normal! zc
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zo
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+798
+normal! zc
+803
+normal! zo
+803
+normal! zc
+807
+normal! zo
+807
+normal! zc
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zo
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+810
+normal! zc
+813
+normal! zo
+813
+normal! zo
+820
+normal! zo
+820
+normal! zc
+813
+normal! zc
+813
+normal! zc
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zo
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+827
+normal! zc
+836
+normal! zo
+836
+normal! zc
+846
+normal! zo
+846
+normal! zc
+853
+normal! zo
+853
+normal! zc
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zo
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+860
+normal! zc
+863
+normal! zo
+863
+normal! zc
+872
+normal! zo
+872
+normal! zo
+895
+normal! zo
+895
+normal! zo
+895
+normal! zo
+895
+normal! zo
+895
+normal! zo
+895
+normal! zc
+895
+normal! zc
+895
+normal! zc
+895
+normal! zc
+895
+normal! zc
+902
+normal! zo
+902
+normal! zo
+902
+normal! zo
+902
+normal! zo
+902
+normal! zo
+902
+normal! zc
+902
+normal! zc
+902
+normal! zc
+902
+normal! zc
+902
+normal! zc
+907
+normal! zo
+907
+normal! zo
+907
+normal! zc
+907
+normal! zc
+872
+normal! zc
+872
+normal! zc
+let s:l = 775 - ((23 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1235,8 +5192,8 @@ normal! zt
 normal! 042|
 lcd ~/.vim/bundle/vim-startify/doc
 wincmd w
-exe '1resize ' . ((&lines * 29 + 31) / 63)
-exe '2resize ' . ((&lines * 30 + 31) / 63)
+exe '1resize ' . ((&lines * 25 + 27) / 55)
+exe '2resize ' . ((&lines * 26 + 27) / 55)
 tabnext 3
 set stal=1
 if exists('s:wipebuf')
