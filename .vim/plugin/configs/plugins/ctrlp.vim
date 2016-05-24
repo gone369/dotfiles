@@ -21,8 +21,8 @@ let g:ctrlp_prompt_mappings = {
       \ 'ToggleFocus()':        ['<F1>'],
       \ 'ToggleRegex()':        ['<F3>'],
       \ 'ToggleByFname()':      ['<F2>'],
-      \ 'ToggleType(1)':        ['<c-f>', '<c-up>', '<F4>'],
-      \ 'ToggleType(-1)':       ['<c-b>', '<c-down>'],
+      \ 'ToggleType(1)':        ['<c-f>', '<c-up>', '<c-right>' , '<F4>'],
+      \ 'ToggleType(-1)':       ['<c-b>', '<c-down>', '<c-left>' ],
       \ 'PrtExpandDir()':       ['<tab>'],
       \ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],
       \ 'PrtInsert()':          ['<c-\>'],
@@ -39,8 +39,9 @@ let g:ctrlp_prompt_mappings = {
       \ }
 
 let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'undo', 'line', 'changes', 'mixed']
-let g:ctrlp_by_filename = 1
+let g:ctrlp_by_filename = 0
 let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*' " MacOSX/Linux
 let g:ctrlp_mruf_exclude = '^C:\\dev\\tmp\\.*' " Windows
 let g:ctrlp_mruf_exclude = '\.log$|\.error$' 
 
+let g:ctrlp_cmd = 'CtrlPLastMode'

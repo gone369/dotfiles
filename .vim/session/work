@@ -29,7 +29,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 7 - ((5 * winheight(0) + 27) / 54)
+let s:l = 7 - ((5 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -50,7 +50,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 27) / 54)
+let s:l = 1 - ((0 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -65,8 +65,8 @@ split
 wincmd w
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 26 + 28) / 57)
-exe '2resize ' . ((&lines * 27 + 28) / 57)
+exe '1resize ' . ((&lines * 27 + 29) / 58)
+exe '2resize ' . ((&lines * 27 + 29) / 58)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -78,7 +78,9 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 8,16fold
-let s:l = 42 - ((4 * winheight(0) + 13) / 26)
+8
+normal! zc
+let s:l = 42 - ((4 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -5192,8 +5194,8 @@ normal! zt
 normal! 042|
 lcd ~/.vim/bundle/vim-startify/doc
 wincmd w
-exe '1resize ' . ((&lines * 26 + 28) / 57)
-exe '2resize ' . ((&lines * 27 + 28) / 57)
+exe '1resize ' . ((&lines * 27 + 29) / 58)
+exe '2resize ' . ((&lines * 27 + 29) / 58)
 tabnext 1
 set stal=1
 if exists('s:wipebuf')
