@@ -154,12 +154,12 @@
 [submodule ".vim/bundle/clever-f.vim"]
 	path = .vim/bundle/clever-f.vim
 	url = https://github.com/rhysd/clever-f.vim
-[submodule ".vim/bundle/camelcasemotion"]
-	path = .vim/bundle/camelcasemotion
-	url = https://github.com/bkad/camelcasemotion
 [submodule ".vim/bundle/vim-choosewin"]
 	path = .vim/bundle/vim-choosewin
 	url = https://github.com/t9md/vim-choosewin
 [submodule ".vim/bundle/vim-quickrun"]
 	path = .vim/bundle/vim-quickrun
 	url = https://github.com/thinca/vim-quickrun
+[submodule ".vim/bundle/vim-instant-markdown"]
+	path = .vim/bundle/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown
