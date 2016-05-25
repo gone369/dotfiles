@@ -22,6 +22,7 @@ set title
 set scrolloff=3
 set cmdheight=2
 set number
+set foldlevel=99
 colors solarized
 "colors koehler
 

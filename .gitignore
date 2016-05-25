@@ -10,4 +10,5 @@
 !setup.sh
 !.tmux.conf
 !.tmuxhelp.txt
+!.ctags
 !bootstrap_vm.sh
