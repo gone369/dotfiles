@@ -50,20 +50,21 @@ function runnvm {
 function runnpm {
   echo 'installing npm modules'
   modules=(
+    babel-eslint
+    bower
+    esctags
+    eslint
+    eslint-plugin-angular
+    eslint-plugin-react
+    express
     grunt-cli
     gulp
-    webpack
-    bower
-    express
-    babel-eslint
-    eslint
-    eslint-plugin-react
-    eslint-plugin-angular
+    instant-markdown-d
     jshint
-    esctags
     npm-check-updates
     react-tools
     syntastic-react
+    webpack
   )
   npm install -g ${modules[@]}
 }
