@@ -23,6 +23,7 @@ set scrolloff=3
 set cmdheight=2
 set number
 set foldlevel=99
+set guitablabel=\[%N\]\ %F\ %M 
 colors solarized
 "colors koehler
 

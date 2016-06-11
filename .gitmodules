@@ -151,15 +151,15 @@
 [submodule ".vim/bundle/smartgf.vim"]
 	path = .vim/bundle/smartgf.vim
 	url = https://github.com/gorkunov/smartgf.vim.git
-[submodule ".vim/bundle/clever-f.vim"]
-	path = .vim/bundle/clever-f.vim
-	url = https://github.com/rhysd/clever-f.vim
-[submodule ".vim/bundle/vim-choosewin"]
-	path = .vim/bundle/vim-choosewin
-	url = https://github.com/t9md/vim-choosewin
 [submodule ".vim/bundle/vim-quickrun"]
 	path = .vim/bundle/vim-quickrun
 	url = https://github.com/thinca/vim-quickrun
 [submodule ".vim/bundle/vim-instant-markdown"]
 	path = .vim/bundle/vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule ".vim/bundle/bufexplorer.zip"]
+	path = .vim/bundle/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
