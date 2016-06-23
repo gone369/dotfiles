@@ -9,6 +9,7 @@ endif
 " ---------------------(syntax)SYNTAX HIGHLIGHTING----------------------------
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+autocmd BufRead,BufNewFile .eslintrc,.babelrc setfiletype json
 "au FileType javascript call JavaScriptFold()
 "autocmd BufReadPre *.js let g:used_javascript_libs = 'underscore,angularjs,angularui,angularuirouter,react,flux,jasmin'
 "autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
