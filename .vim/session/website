@@ -1,0 +1,220 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/Documents/Code/xun_personal_site/src/client/assets/scss
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 ~/Documents/Code/xun_personal_site/src/client/view/home/home.js
+badd +87 ~/Documents/Code/xun_personal_site/src/client/view/components/MenuDots/menudots.js
+badd +0 ~/Documents/Code/xun_personal_site/src/client/view/components/MenuDots/_menudots.scss
+badd +0 ~/Documents/Code/xun_personal_site/src/client/view/index.js
+badd +0 ~/Documents/Code/xun_personal_site/src/client/client.js
+badd +31 ~/Documents/Code/xun_personal_site/src/client/view/intro/codeIntro/codeintro.js
+badd +0 ~/Documents/Code/xun_personal_site/src/client/view/intro/codeIntro/_codeintro.scss
+badd +1 main.scss
+badd +0 _mixins.scss
+argglobal
+silent! argdel *
+set stal=2
+edit ~/Documents/Code/xun_personal_site/src/client/view/home/home.js
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 4 - ((3 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+4
+normal! 0
+lcd ~/Documents/Code/xun_personal_site/src/client/view/home
+tabedit ~/Documents/Code/xun_personal_site/src/client/view/index.js
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 84 - ((22 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+84
+normal! 09|
+lcd ~/Documents/Code/xun_personal_site/src/client/view
+tabedit ~/Documents/Code/xun_personal_site/src/client/client.js
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 16 - ((15 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+16
+normal! 0
+lcd ~/Documents/Code/xun_personal_site/src/client
+tabedit ~/Documents/Code/xun_personal_site/src/client/view/components/MenuDots/menudots.js
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 97 + 97) / 195)
+exe 'vert 2resize ' . ((&columns * 97 + 97) / 195)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 87 - ((22 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+87
+normal! 045|
+lcd ~/Documents/Code/xun_personal_site/src/client/view/components/MenuDots
+wincmd w
+argglobal
+edit ~/Documents/Code/xun_personal_site/src/client/view/components/MenuDots/_menudots.scss
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 16 - ((15 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+16
+normal! 027|
+lcd ~/Documents/Code/xun_personal_site/src/client/view/components/MenuDots
+wincmd w
+exe 'vert 1resize ' . ((&columns * 97 + 97) / 195)
+exe 'vert 2resize ' . ((&columns * 97 + 97) / 195)
+tabedit ~/Documents/Code/xun_personal_site/src/client/view/intro/codeIntro/codeintro.js
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 97 + 97) / 195)
+exe 'vert 2resize ' . ((&columns * 97 + 97) / 195)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 86 - ((50 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+86
+normal! 050|
+lcd ~/Documents/Code/xun_personal_site/src/client/view/intro/codeIntro
+wincmd w
+argglobal
+edit ~/Documents/Code/xun_personal_site/src/client/view/intro/codeIntro/_codeintro.scss
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 29 - ((28 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+29
+normal! 07|
+lcd ~/Documents/Code/xun_personal_site/src/client/view/intro/codeIntro
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 97 + 97) / 195)
+exe 'vert 2resize ' . ((&columns * 97 + 97) / 195)
+tabedit ~/Documents/Code/xun_personal_site/src/client/assets/scss/_mixins.scss
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 261 - ((29 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+261
+normal! 0
+lcd ~/Documents/Code/xun_personal_site/src/client/assets/scss
+tabnext 5
+set stal=1
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
