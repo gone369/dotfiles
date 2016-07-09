@@ -1,6 +1,7 @@
 *
 !.vim
 !.vim/**
+!.vim/**/*
 !.vimrc
 !.bash_profile
 !.bashrc
@@ -12,4 +13,3 @@
 !.tmuxhelp.txt
 !.ctags
 !bootstrap_vm.sh
-.vim/session
