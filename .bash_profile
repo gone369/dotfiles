@@ -66,6 +66,7 @@ alias cd='cs'
 alias aliases='vim ~/.bash_profile'
 alias ..='cd ../'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 alias ll='ls -FGlAhp'
 alias la='ls -a'
 alias open='open -a Finder ./'
@@ -80,13 +81,6 @@ alias cp="cp -v"
 alias grep="grepe"
 alias tmuxhelp="cat ~/.tmuxhelp.txt"
 alias v="sh ~/.vim/scripts/vim.sh"
-
-#ssh servers
-alias sshak15="ssh root@ak0015.targethpc.com"
-alias sshak17="ssh root@ak0017.targethpc.com"
-alias sshak19="ssh root@ak0019.targethpc.com"
-alias sshak22="ssh root@ak0022.targethpc.com"
-alias sshak28="ssh root@ak0028.targethpc.com"
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 alias tmux="TERM=screen-256color-bce tmux"
