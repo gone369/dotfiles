@@ -49,7 +49,7 @@ Plug 'vim-scripts/bufexplorer.zip', { 'on' : 'BufExplorer' }
 Plug 'vim-scripts/repmo.vim'
 Plug 'wellle/targets.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-reload' 
-Plug 'zefei/vim-colortuner', { 'on' : 'Colortuner' }
+Plug 'zefei/vim-colortuner'
 Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
 call plug#end()
 
