@@ -34,9 +34,9 @@ Plug 'rstacruz/sparkup', { 'for': ['javascript','html'] }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree',{ 'on': 'NERDTreeToggle'}
 Plug 'scrooloose/syntastic'
-Plug 'https://github.com/sjl/gundo.vim.git'
+Plug 'https://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
 Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d' }
-Plug 't9md/vim-choosewin'
+Plug 't9md/vim-choosewin', { 'on': '<Plug>(choosewin)' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git'
 Plug 'tpope/vim-abolish'
@@ -45,11 +45,11 @@ Plug 'tpope/vim-haml', { 'for' : ['haml','sass','scss','css'] }
 Plug 'tpope/vim-surround'
 Plug 'triglav/vim-visual-increment'
 Plug 'vim-ruby/vim-ruby', { 'for' : ['ruby'] }
-Plug 'vim-scripts/bufexplorer.zip'
+Plug 'vim-scripts/bufexplorer.zip', { 'on' : 'BufExplorer' }
 Plug 'vim-scripts/repmo.vim'
 Plug 'wellle/targets.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-reload' 
-Plug 'zefei/vim-colortuner'
+Plug 'zefei/vim-colortuner', { 'on' : 'Colortuner' }
 Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
 call plug#end()
 

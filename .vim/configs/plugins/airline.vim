@@ -1,6 +1,6 @@
 "-------------airline-----------"
 "set guifont=Source\ Code\ Pro\ for\ Powerline
-set guifont=Roboto\ Mono\ Thin\ for\ Powerline
+set guifont=Roboto\ Mono\ Light\ for\ Powerline
 let g:airline_powerline_fonts = 1
 if !has("gui_running")
   let g:airline#extensions#tabline#enabled = 1

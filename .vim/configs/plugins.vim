@@ -1,4 +1,5 @@
 so ~/.vim/configs/plugins/airline.vim
+so ~/.vim/configs/plugins/bufexplorer.vim
 so ~/.vim/configs/plugins/choosewin.vim
 so ~/.vim/configs/plugins/colortuner.vim
 so ~/.vim/configs/plugins/commandt.vim
