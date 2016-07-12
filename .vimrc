@@ -38,7 +38,7 @@ Plug 'https://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
 Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d' }
 Plug 't9md/vim-choosewin', { 'on': '<Plug>(choosewin)' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git'
+Plug 'SirVer/ultisnips' | Plug 'git@github.com:gone369/vim-snippets.git'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-haml', { 'for' : ['haml','sass','scss','css'] }
@@ -51,6 +51,8 @@ Plug 'wellle/targets.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-reload' 
 Plug 'zefei/vim-colortuner'
 Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
+
+"Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git', { 'as': 'snippets' }
 call plug#end()
 
 so ~/.vim/configs/settings.vim

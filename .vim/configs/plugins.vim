@@ -18,4 +18,5 @@ so ~/.vim/configs/plugins/sparkup.vim
 so ~/.vim/configs/plugins/startify.vim
 so ~/.vim/configs/plugins/syntastic.vim
 so ~/.vim/configs/plugins/tabularize.vim
+so ~/.vim/configs/plugins/ultisnips.vim
 so ~/.vim/configs/plugins/visual-increment.vim

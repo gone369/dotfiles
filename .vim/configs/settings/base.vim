@@ -1,6 +1,7 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
 set nomodeline "https://www.cs.swarthmore.edu/help/vim/modelines.html
 set splitbelow
 set splitright

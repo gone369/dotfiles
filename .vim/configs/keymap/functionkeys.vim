@@ -38,8 +38,9 @@ vnoremap <F5> :GundoToggle<CR>
 
 
 "look at all snippets"
-nmap <Leader>snip i<C-R><tab>
-nmap <F4> :call ReloadAllSnippets()<CR>
+"nmap <Leader>snip i<C-R><tab>
+"nmap <F4> :call ReloadAllSnippets()<CR>
+nmap <F4> :UltiSnipsEdit<CR>
 
 " spell check
 inoremap <F3> :setlocal spell!<cr> :echo "spell check Toggle"<cr> 
