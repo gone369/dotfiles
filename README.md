@@ -15,7 +15,8 @@ open up .vimrc
 ```bash
 vim ~/.vimrc`
 ```
-* edit the Plug files specified in .vimrc
+* edit the Plug files specified in .vimrc  
+<u><b>(note some plugins require python supported vim, [node.js](nodejs.org) installed and [powerline fonts](https://github.com/powerline/fonts))</b></u>
 * Execute `:PlugInstall`
 
 ## using [pathogen](https://github.com/tpope/vim-pathogen) to maintain your vim plugins
