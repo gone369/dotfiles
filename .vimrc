@@ -35,7 +35,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree',{ 'on': 'NERDTreeToggle'}
 Plug 'scrooloose/syntastic'
 Plug 'https://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
-Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d' } 'REQUIRES NODE.JS
+Plug 'suan/vim-instant-markdown', { 'do': 'npm -g install instant-markdown-d' } "REQUIRES NODE.JS
 Plug 't9md/vim-choosewin', { 'on': '<Plug>(choosewin)' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'SirVer/ultisnips' | Plug 'git@github.com:gone369/vim-snippets.git'
