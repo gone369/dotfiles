@@ -7,7 +7,9 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " ---------------------(syntax)SYNTAX HIGHLIGHTING----------------------------
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufRead *.coffee setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.ejs set filetype=html
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufRead,BufNewFile .eslintrc,.babelrc setfiletype json
 "au FileType javascript call JavaScriptFold()

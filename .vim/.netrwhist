@@ -1,9 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/Xun/.git/modules/.vim'
-let g:netrw_dirhist_2='/Users/Xun/.git/modules/.vim/bundle'
-let g:netrw_dirhist_3='/Users/Xun/.git/modules/.vim/bundle/vim-nerdcommenter'
-let g:netrw_dirhist_4='/Users/z00201y/Documents/Code/election2016/bower_components'
-let g:netrw_dirhist_5='/Users/z00201y/Documents/Code/stream_graph/src/client/view/projects'
-let g:netrw_dirhist_6='/Users/z00201y/.vim/plugged/vim-snipmate'
-let g:netrw_dirhist_7='/Users/z00201y/.vim/configs/plugins'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/z00201y/Documents/Code/deep-inspection-v2_node-client/node_modules'
+let g:netrw_dirhist_2='/Users/z00201y/Documents/Code/retail_dashboard/config'
