@@ -29,6 +29,7 @@ Plug 'mhinz/vim-startify'
 Plug 'myusuf3/numbers.vim'
 Plug 'othree/html5.vim', { 'for' : ['html'] }
 Plug 'pangloss/vim-javascript', { 'for' : ['javascript','jsx'] } | Plug 'mxw/vim-jsx'
+Plug 'othree/javascript-libraries-syntax.vim', { 'for' : ['javascript','jsx'] } 
 Plug 'rking/ag.vim'
 Plug 'rstacruz/sparkup', { 'for': ['javascript','html'] }
 Plug 'scrooloose/nerdcommenter'
