@@ -46,11 +46,13 @@ Plug 'tpope/vim-surround'
 Plug 'triglav/vim-visual-increment'
 Plug 'vim-ruby/vim-ruby', { 'for' : ['ruby'] }
 Plug 'vim-scripts/bufexplorer.zip', { 'on' : 'BufExplorer' }
-Plug 'vim-scripts/repmo.vim'
+"Plug 'vim-scripts/repmo.vim'
 Plug 'wellle/targets.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-reload' 
 Plug 'zefei/vim-colortuner'
-Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
+"Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
+Plug 'zenbro/mirror.vim'
+Plug 'shougo/vimproc.vim',{'do':'make'} | Plug 'shougo/vimshell.vim'
 
 "Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git', { 'as': 'snippets' }
 call plug#end()

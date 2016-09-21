@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/z00201y/Documents/Code/deep-inspection-v2_node-client/node_modules'
 let g:netrw_dirhist_2='/Users/z00201y/Documents/Code/retail_dashboard/config'
+let g:netrw_dirhist_3='/Users/z00201y/Documents/Code/universe/src/server'
+let g:netrw_dirhist_4='/Users/z00201y/Documents/Code/edabi_dashboard/config'
+let g:netrw_dirhist_5='scp://root@ak0022.targethpc.com//'
+let g:netrw_dirhist_6='scp://root@ak0022.targethpc.com//var/'
+let g:netrw_dirhist_7='scp://root@ak0022.targethpc.com//home/'
+let g:netrw_dirhist_8='scp://root@ak0022.targethpc.com/~/git/test/'
+let g:netrw_dirhist_9='scp://root@ak0022.targethpc.com/~/git/'

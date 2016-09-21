@@ -4,6 +4,7 @@ fi
 if [ -f -/profile ]; then
     source ~/.profile
 fi
+
 #history
 export HISTSIZE=2000
 export HISTFILESIZE=10000

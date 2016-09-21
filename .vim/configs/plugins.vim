@@ -8,6 +8,7 @@ so ~/.vim/configs/plugins/easymotion.vim
 so ~/.vim/configs/plugins/easytags.vim
 so ~/.vim/configs/plugins/indentline.vim
 so ~/.vim/configs/plugins/matchtagalways.vim
+so ~/.vim/configs/plugins/mirror.vim
 so ~/.vim/configs/plugins/multiple-cursor.vim
 so ~/.vim/configs/plugins/nerdtree.vim
 so ~/.vim/configs/plugins/numbers.vim
@@ -19,4 +20,5 @@ so ~/.vim/configs/plugins/startify.vim
 so ~/.vim/configs/plugins/syntastic.vim
 so ~/.vim/configs/plugins/tabularize.vim
 so ~/.vim/configs/plugins/ultisnips.vim
+so ~/.vim/configs/plugins/vimshell.vim
 so ~/.vim/configs/plugins/visual-increment.vim

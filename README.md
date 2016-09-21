@@ -1,8 +1,6 @@
 My Dotfiles
 ===========
 
-#How to Manage Vim plugins
-
 ```bash
 cd ~
 git init

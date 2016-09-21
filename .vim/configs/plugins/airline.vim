@@ -38,4 +38,8 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#tagbar#enabled = 0
+  let g:airline#extensions#whitespace#enabled = 0
+
 set laststatus=2
