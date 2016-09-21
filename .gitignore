@@ -4,6 +4,9 @@
 !.vim
 !.vim/**
 !.vim/**/*
+.vim/bundle
+.vim/plugged
+.vim/session
 !.vimrc
 !.bash_profile
 !.bashrc
