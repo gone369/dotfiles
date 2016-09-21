@@ -1,5 +1,6 @@
 *
 .vim/.netrwhist
+.vim/fonts
 !.vim
 !.vim/**
 !.vim/**/*
