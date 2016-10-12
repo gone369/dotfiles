@@ -82,6 +82,7 @@ alias cp="cp -v"
 alias grep="grepe"
 alias tmuxhelp="cat ~/.tmuxhelp.txt"
 alias v="sh ~/.vim/scripts/vim.sh"
+alias runcentos6="docker run -d --name centos6 -p 2222:22 xunchen369/centos6"
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 alias tmux="TERM=screen-256color-bce tmux"
