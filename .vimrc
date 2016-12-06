@@ -13,6 +13,9 @@ Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways', { 'for' : ['html'] }
 Plug 'Yggdroot/indentLine'
 Plug 'altercation/vim-colors-solarized'
+Plug 'jelera/vim-javascript-syntax'
+Plug '1995eaton/vim-better-javascript-completion'
+Plug 'heavenshell/vim-jsdoc'
 Plug 'chrisbra/vim-sh-indent', { 'for' : ['shell','sh'] }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug', { 'for' : ['pug','jade'] }
