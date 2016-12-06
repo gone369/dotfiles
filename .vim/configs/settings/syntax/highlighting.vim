@@ -25,9 +25,7 @@ autocmd BufNewFile,BufReadPre *.js let b:javascript_lib_use_react = 1
 "au FileType javascript call JavaScriptFold()
 "
 let g:javascript_enable_domhtmlcss = 1
-let b:javascript_fold = 1
-"turn .js files into .jsx files if 0
-let g:jsx_ext_required = 0 
+let b:javascript_fold = 0
 
 "---- deletes highlighting after search by pressing esc
 nnoremap <silent> <CR> :nohl <cr><cr>

@@ -24,4 +24,5 @@ so ~/.vim/configs/plugins/vimshell.vim
 so ~/.vim/configs/plugins/visual-increment.vim
 so ~/.vim/configs/plugins/vim-better-javascript-completion.vim
 so ~/.vim/configs/plugins/vim-jsdoc.vim
+so ~/.vim/configs/plugins/vim-jsx.vim
 
