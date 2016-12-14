@@ -47,6 +47,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-haml', { 'for' : ['haml','sass','scss','css'] }
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'triglav/vim-visual-increment'
 Plug 'vim-ruby/vim-ruby', { 'for' : ['ruby'] }
 Plug 'vim-scripts/bufexplorer.zip', { 'on' : 'BufExplorer' }
