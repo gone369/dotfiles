@@ -1,7 +1,7 @@
 " File: .vimrc
 " Author: gone369
 " Description: vimrc
-" Last Modified: Fri Jul  8 23:27:49 2016
+" Last Modified: Tue Dec 13 22:37:31 2016
 "
 "execute pathogen#infect()
 
