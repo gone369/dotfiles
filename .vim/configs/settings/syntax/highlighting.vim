@@ -11,7 +11,7 @@ autocmd BufNewFile,BufReadPre *.coffee setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd BufNewFile,BufReadPre *.ejs set filetype=html
 autocmd BufNewFile,BufReadPre *.es6 setfiletype javascript
-autocmd BufNewFile,BufReadPre .eslintrc,.babelrc setfiletype json
+autocmd BufNewFile,BufReadPre .eslintrc,.babelrc,*.gyp setfiletype json
 
 autocmd BufNewFile,BufReadPre *.js let g:used_javascript_libs = 'underscore,angularjs,angularui,angularuirouter,react,flux,jasmin,chai'
 autocmd BufNewFile,BufReadPre *.js let b:javascript_lib_use_jquery = 0
