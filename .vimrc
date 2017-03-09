@@ -3,13 +3,14 @@
 " Description: vimrc
 " Last Modified: Tue Dec 13 22:37:31 2016
 "
+if version >= 500
 "execute pathogen#infect()
 
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on' : ['TagbarOpen','TagbarToggle','Tagbar','TagbarClose'] }
 Plug 'Valloric/MatchTagAlways', { 'for' : ['html'] }
 Plug 'Yggdroot/indentLine'
 Plug 'altercation/vim-colors-solarized'
@@ -56,9 +57,10 @@ Plug 'wellle/targets.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-reload' 
 Plug 'zefei/vim-colortuner'
 "Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
-Plug 'zenbro/mirror.vim'
+Plug 'zenbro/mirror.vim', {'on' : ['MirrorConfig','MirrorConfigReload']}
 Plug 'shougo/vimproc.vim',{'do':'make'} | Plug 'shougo/vimshell.vim'
 Plug 'vim-scripts/Tabmerge'
+Plug 'metakirby5/codi.vim'
 
 "Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git', { 'as': 'snippets' }
 call plug#end()
@@ -67,3 +69,4 @@ so ~/.vim/configs/settings.vim
 so ~/.vim/configs/plugins.vim
 so ~/.vim/configs/keymap.vim
 so ~/.vim/configs/scripts.vim
+endif

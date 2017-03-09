@@ -1,8 +1,8 @@
 so ~/.vim/configs/plugins/airline.vim
 so ~/.vim/configs/plugins/bufexplorer.vim
 so ~/.vim/configs/plugins/choosewin.vim
+so ~/.vim/configs/plugins/codi.vim
 so ~/.vim/configs/plugins/colortuner.vim
-so ~/.vim/configs/plugins/commandt.vim
 so ~/.vim/configs/plugins/ctrlp.vim
 so ~/.vim/configs/plugins/easymotion.vim
 so ~/.vim/configs/plugins/easytags.vim
@@ -20,9 +20,9 @@ so ~/.vim/configs/plugins/startify.vim
 so ~/.vim/configs/plugins/syntastic.vim
 so ~/.vim/configs/plugins/tabularize.vim
 so ~/.vim/configs/plugins/ultisnips.vim
-so ~/.vim/configs/plugins/vimshell.vim
-so ~/.vim/configs/plugins/visual-increment.vim
 so ~/.vim/configs/plugins/vim-better-javascript-completion.vim
 so ~/.vim/configs/plugins/vim-jsdoc.vim
 so ~/.vim/configs/plugins/vim-jsx.vim
+so ~/.vim/configs/plugins/vimshell.vim
+so ~/.vim/configs/plugins/visual-increment.vim
 

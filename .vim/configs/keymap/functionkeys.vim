@@ -31,6 +31,11 @@ nnoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
 onoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
 vnoremap <F8> :SyntasticToggleMode <cr> :echo "Toggling Syntastic"
 
+inoremap <F6> :Codi<CR>
+nnoremap <F6> :Codi<CR>
+onoremap <F6> :Codi<CR>
+vnoremap <F6> :Codi<CR>
+
 inoremap <F5> :GundoToggle<CR>
 nnoremap <F5> :GundoToggle<CR>
 onoremap <F5> :GundoToggle<CR>
