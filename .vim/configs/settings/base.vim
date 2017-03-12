@@ -41,7 +41,7 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-if has("gui_running")
+if has("gui_running") && !has("win32")
   set transparency=10
 endif
 
