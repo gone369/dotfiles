@@ -1,5 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/z00201y/Documents/Code/amygdala-dashboard/.git'
 let g:netrw_dirhist_2='/Users/z00201y/Documents/Code/amygdala-dashboard/config/client'
 let g:netrw_dirhist_3='/Users/z00201y/Documents/Code/pulsar/app/assets/stylesheets/pulsar'
+let g:netrw_dirhist_4='/Users/z00201y/Documents/Code/pulsar-universe/src'
+let g:netrw_dirhist_5='/Users/z00201y/Documents/Code/pulsar-universe/src/server'
+let g:netrw_dirhist_6='/Users/z00201y/Documents/Code/pulsar-universe/src'
+let g:netrw_dirhist_7='/Users/z00201y/Documents/Code/pulsar-universe/src/server'
+let g:netrw_dirhist_8='/Users/z00201y/Documents/Code/pulsar-universe-webpack/bower_components/foundation/scss/foundation'
+let g:netrw_dirhist_9='/Users/z00201y/Documents/Code/thalamus/config/webpack'
