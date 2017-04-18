@@ -24,7 +24,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for' : ['json','jsonp'] }
 Plug 'gko/vim-coloresque', { 'for': ['css','scss','sass','less','javascript','json','jsx'] }
 Plug 'godlygeek/tabular'
-Plug 'gorkunov/smartgf.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'https://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
 Plug 'isRuslan/vim-es6', { 'for': ['javascript','jsx'] }
@@ -39,7 +38,6 @@ Plug 'myusuf3/numbers.vim'
 Plug 'othree/html5.vim', { 'for' : ['html'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for' : ['javascript','jsx'] } 
 Plug 'pangloss/vim-javascript', { 'for' : ['javascript','jsx'] } | Plug 'chemzqm/vim-jsx-improve'
-Plug 'rking/ag.vim'
 Plug 'rstacruz/sparkup', { 'for': ['javascript','html'] }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree',{ 'on': 'NERDTreeToggle'}
@@ -61,7 +59,17 @@ Plug 'vim-scripts/bufexplorer.zip', { 'on' : 'BufExplorer' }
 Plug 'wellle/targets.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-reload' 
 Plug 'zefei/vim-colortuner'
-Plug 'zenbro/mirror.vim', {'on' : ['MirrorConfig','MirrorConfigReload']}
+"Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
+Plug 'vim-scripts/Tabmerge'
+Plug 'metakirby5/codi.vim'
+if !has("win32")
+  Plug 'rking/ag.vim'
+  Plug 'zenbro/mirror.vim', {'on' : ['MirrorConfig','MirrorConfigReload']}
+  Plug 'shougo/vimproc.vim',{'do':'make'} | Plug 'shougo/vimshell.vim'
+  Plug 'gorkunov/smartgf.vim'
+endif
+
+"Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git', { 'as': 'snippets' }
 call plug#end()
 
 so ~/.vim/configs/settings.vim
