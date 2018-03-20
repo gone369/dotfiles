@@ -1,0 +1,22 @@
+brew
+nvm
+yarn
+pm2
+
+
+brew taps
+- wget
+- htop
+- vim
+- macvim
+- iterm2
+- git
+- the_silver_searcher
+ 
+ brew casks
+
+
+npm packages
+instand-markdown-d
+npm-check-updates
+syntastic-react
