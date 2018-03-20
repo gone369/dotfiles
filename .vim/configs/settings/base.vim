@@ -25,7 +25,7 @@ set cmdheight=2
 set number
 set foldlevel=99
 set guitablabel=\[%N\]\ %F\ %M 
-colors solarized
+colors distinguished
 "colors koehler
 
 " allow backspacing over everything in insert mode
