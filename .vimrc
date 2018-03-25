@@ -62,6 +62,8 @@ Plug 'zefei/vim-colortuner'
 "Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
 Plug 'vim-scripts/Tabmerge'
 Plug 'metakirby5/codi.vim'
+Plug 'posva/vim-vue'
+ 
 if !has("win32")
   Plug 'rking/ag.vim'
   Plug 'zenbro/mirror.vim', {'on' : ['MirrorConfig','MirrorConfigReload']}
