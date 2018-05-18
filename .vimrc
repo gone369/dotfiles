@@ -25,7 +25,7 @@ Plug 'elzr/vim-json', { 'for' : ['json','jsonp'] }
 Plug 'gko/vim-coloresque', { 'for': ['css','scss','sass','less','javascript','json','jsx'] }
 Plug 'godlygeek/tabular'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'https://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
+Plug 'https://github.com/sjl/gundo.vim.git'
 Plug 'isRuslan/vim-es6', { 'for': ['javascript','jsx'] }
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kana/vim-textobj-user' | Plug 'nelstrom/vim-textobj-rubyblock', { 'for': ['ruby'] }
