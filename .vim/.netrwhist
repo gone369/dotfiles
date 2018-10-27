@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/xun/Documents/Code/bowknot/src/client/index.js'
 let g:netrw_dirhist_2='/Users/xun/Documents/Code/xun_personal_site_lite/config'
+let g:netrw_dirhist_3='/Users/xun/.vim/fonts'
