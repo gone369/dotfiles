@@ -63,6 +63,7 @@ Plug 'zefei/vim-colortuner'
 Plug 'vim-scripts/Tabmerge'
 Plug 'metakirby5/codi.vim'
 Plug 'posva/vim-vue'
+Plug 'leafgarland/typescript-vim'
  
 if !has("win32")
   Plug 'rking/ag.vim'
