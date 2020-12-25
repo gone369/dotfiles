@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 "Plug 'tomtom/tlib_vim' | Plug 'Marcweber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'https://github.com/gone369/snipmate_snippets.git', { 'as': 'snippets' }
 "Plug 'vim-scripts/repmo.vim'
 "Plug 'vim-scripts/ruby-matchit', { 'for' : ['ruby'] }
+"
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'eslint/eslint'
 Plug '1995eaton/vim-better-javascript-completion'
 Plug 'SirVer/ultisnips' | Plug 'gone369/vim-snippets'
 Plug 'Valloric/MatchTagAlways', { 'for' : ['html'] }
@@ -64,7 +67,7 @@ Plug 'vim-scripts/Tabmerge'
 Plug 'metakirby5/codi.vim'
 Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
- 
+
 if !has("win32")
   Plug 'rking/ag.vim'
   Plug 'zenbro/mirror.vim', {'on' : ['MirrorConfig','MirrorConfigReload']}
